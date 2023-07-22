@@ -1,0 +1,234 @@
+określ styl paragrafów: kolor pomarańczowy 
+<style>p{color:orange;}</style>
+określ styl dla id "noweId": niebieski kolor 
+<style>#noweId{color:blue;}</style>
+określ styl dla klasy "nowaKlasa": kolor żółty 
+<style>.nowaKlasa{color:yellow;}</style>
+określ styl dla nagłówka o rozmiarze 1 oraz dla paragrafu: kolor zielony 
+<style>h1,p{color:green;}</style>
+dodaj zewnętrzny plik "mojstyl.css" zawierający style 
+<head><link rel="stylesheet" href="mojstyl.css"></head>
+określ styl strony: oliwkowy kolor tła 
+<style>body{background-color:olive;}</style>
+stosując "wewnętrzny" zapis, określ styl strony: purpurowy kolor tła 
+<body style="background-color:purple;"></body>
+określ styl nagłówka o rozmiarze 2: kolor jasnoniebieski 
+<style>h2{color:lightblue;}</style>
+określ styl nagłówka o rozmiarze 3: zielony kolor tła 
+<style>h3{background-color:green;}</style>
+określ styl strony: obrazek "pic.gif" jako tło 
+<style>body{background-image:url('pic.gif');}</style>
+określ styl strony: obrazek "drzewo.jpg" powtarzający się tylko pionowo 
+<style>body{background-image:url('drzewo.jpg');background-repeat:repeat-y;}</style>
+określ styl strony: obrazek "niebo.png" nie powtarzający się, umiejscowiony w prawym górnym rogu 
+<style>body{background-image:url('niebo.png');background-repeat:no-repeat;background-position:top right;}</style>
+określ styl strony: obrazek "krajobraz.jpg" nie przewijający się 
+<style>body{background-image:url('krajobraz.jpg');background-attachment:fixed;}</style>
+określ styl granicy paragrafu: grubość 3 piseli, styl kropkowany, kolor granatowy 
+<style>p{border:3px dotted navy;}</style>
+określ styl granicy paragrafu: granica kropkowana, szerokość 2 piksele, kolor czerwony; określić elementy osobno 
+<style>p{border-style:dotted;border-width:2px;border-color:red;}</style>
+określ styl lewej części granicy paragrafu: linia kropkowana 
+<style>p{border-left-style:dotted;}</style>
+określ styl paragrafu: granica o grubości 2 pikseli i linia ciągła fioletowa, zaokrąglenie granicy o wielkości 7 pikseli 
+<style>p{border:2px solid violet;border-radius:7px;}</style>
+określ styl nagłówka o rozmiarze 1: lewy margines o wielkości 15 pikseli 
+<style>h1{margin-left:15px;}</style>
+określ styl nagłowka o rozmiarze 2: górny i dolny margines o wielkości 10 pikseli, boczne marginesy o wielkości 20 pikseli 
+<style>h2{margin:10px 20px;}</style>
+określ styl nagłówka o rozmiarze 3: górny margines o wielkości 5 pikseli, prawy - 10 pikseli, dolny - 15 pikseli, lewy - 20 pikseli 
+<style>h3{margin:5px 10px 15px 20px;}</style>
+określ styl nagłówka o rozmiarze 1: margines o automatycznej wielkości 
+<style>h1{margin:auto;}</style>
+określ styl nagłówka o rozmiarze 1: odsunięcie od góry 30 pikseli 
+<style>h1{padding-top:30px;}</style>
+określ styl nagłówka o rozmiarze 2: odsunięcie od wszystkich krawędzi 15 pikseli 
+<style>h2{padding:15px;}</style>
+określ wysokość nagłówków o rozmiarze 1 na stronie: 50 pikseli 
+<style>h1{height:50px;}</style>
+określ szerokość nagłówków o rozmiarze 1 na stronie: 70% 
+<style>h1{width:70%;}</style>
+określ styl sekcji div na stronie: szerokość 200 pikseli 
+<style>div{width:200px;}</style>
+określ styl sekcji div na stronie: szerokość 160 pikseli, granica 2 piksele w formie linii ciągłej pomarańczowej 
+<style>div{width:160px;border:2px solid orange;}</style>
+określ styl sekcji div na stronie: odsunięcie od krawędzi 19 pikseli, lewy margines 14 pikseli 
+<style>div{padding:19px;margin-left:14px;}</style>
+określ styl sekcji div na stronie: zarys w formie linii ciągłej, szerokość zarysu 7 pikseli 
+<style>div{outline-style:solid;outline-width:7px;}</style>
+określ styl sekcji div na stronie: zarys w kolorze czerwonym 
+<style>div{outline-color:red;}</style>
+określ styl sekcji div na stronie: zarys o grubości 3 pikseli, kropkowany, niebieski 
+<style>div{outline:3px dotted blue;}</style>
+określ styl paragrafów na stronie: kolor treści zielony 
+<style>p{color:green;}</style>
+określ styl paragrafów na stronie: wyśrodkowanie tekstu 
+<style>p{text-align:center;}</style>
+określ styl linków na stronie: brak podkreślenia 
+<style>a{text-decoration:none;}</style>
+określ styl nagłówka o rozm. 1 na stronie: tylko wielkie litery, a także styl paragrafów na stronie: pierwsze wielkie litery 
+<style>h1{text-transform:uppercase;}p{text-transform:capitalize;}</style>
+określ styl paragrafów na stronie: akapit 12 pikseli 
+<style>p{text-indent:12px;}</style>
+określ styl nagłówków o rozmiarze 1 na stronie: czcionka "verdana" 
+<style>h1{font-family:verdana;}</style>
+określ styl paragrafów na stronie: kursywa 
+<style>p{font-style:italic;}</style>
+określ styl nagłówków o rozmiarze 2 na stronie: rozmiar czcionki 70 pikseli 
+<style>h2{font-size:70px;}</style>
+określ styl paragrafów na stronie: pogrubiona czcionka 
+<style>p{font-weight:bold;}</style>
+określ styl paragrafów na stronie: wariant czcionki - small-caps 
+<style>p{font-variant:small-caps;}</style>
+spraw, aby linki na stronie po najechaniu kursorem miały kolor ciemny czerwony 
+<style>a:hover{color:darkred;}</style>
+spraw, aby linki na stronie, z których już się skorzystało, miały kolor fioletowy 
+<style>a:visited{color:violet;}</style>
+spraw, aby na stronie linki nieużyte nie miały podkreślenia, użyte linki również nie miały podkreślenia, a linki po najechaniu na nie kursorem miały podkreślenie 
+<style>a:link{text-decoration:none;}a:visited{text-decoration:none;}a:hover{text-decoration:underline;}</style>
+określ styl nieuporządkowanych list na stronie: kwadratowe symbole 
+<style>ul{list-style-type:square;}</style>
+określ styl nieuporządkowanych list na stronie: obrazek "pict2.jpg" jako znak 
+<style>ul{list-style-image:url('pict2.jpg');}</style>
+usuń symbole z nieuporządkowanych list na stronie 
+<style>ul{list-style-type:none;}</style>
+zastosuj styl numeracji "upper-roman" uporządkowanych list na stronie 
+<style>ol{list-style-type:upper-roman;}</style>
+określ styl na stronie dla elementów table, th i td: granica o grubości 3 pikseli w formie ciągłej, niebieskiej linii 
+<style>table,th,td{border:3px solid blue;}</style>
+określ styl elementu table na stronie: brak podwójnej linii 
+<style>table{border-collapse:collapse;}</style>
+stwórz tabelę z dwiema kolumnami (nagłówek: cars, year; rząd 1: Opel, 2015, rząd 2: Volvo, 2018), która ma określony styl - szerokość 90%, a dodatkowo pierwszy rząd (z nagłówkami) ma styl: kolor ciemnoniebieski 
+<table style="width:90%;"><tr style="color:darkblue;"><th>cars</th><th>year</th></tr><tr><td>Opel</td><td>2015</td></tr><tr><td>Volvo</td><td>2018</td></tr></table>
+określ styl elementów table, th, td na stronie: granica o grubości 2 pikseli w formie linii ciągłej zielonej; dodatkowo określ styl dla elementów td: przesunięcie tekstu w lewo 
+<style>table,th,td{border:2px solid green;}td{text-align:left;}</style>
+ukryj elementy h1 na stronie, tak żeby wciąż zajmowały miejsce 
+<style>h1{visibility:hidden;}</style>
+ukryj elementy h2 na stronie, tak aby nie zajmowały miejsca 
+<style>h2{display:none;}</style>
+wyświetl elementy li na stronie jako elementy inline 
+<style>li{display:inline;}</style>
+wyświetl elementy strong na stronie jako elementy block 
+<style>strong{display:block;}</style>
+określ styl elementów h1 na stronie: pozycja względna do krawędzi ramy, odsunięcie 30 pikseli od góry i 20 pikseli od lewej strony 
+<style>h1{position:fixed;top:30px;left:20px;}</style>
+określ pozycję elementu h3 na stronie: pozycja względna do swojej normalnej pozycji, odsunięcie od góry 40 pikseli 
+<style>h3{position:relative;top:40px;}</style>
+określ pozycję elementu h2 na stronie: pozycja względna do strony html, odsunięcie 50 pikseli od góry 
+<style>h2{position:absolute;top:50px;}</style>
+określ pozycję elementu h1: pozycja względna do nazwy swojej klasy "myheader", 60 pikseli od góry 
+<style>.myheader{position:relative;top:60px;}</style><body><h1 class="myheader"></h1></body>
+spraw, by przepełniony tekst przy użyciu klasy "intro", przy uwzględnieniu wymiarów: szerokość 200 pikseli, wysokość 200 pikseli, był niewidoczny 
+<style>.intro{width:200px;height:200px;overflow:hidden;}</style>
+dodaj do klasy "intro" na stronie, przy uwzględnieniu wymiarów: 150 pikseli szerokości i 75 pikseli wysokości, pasek przewijania poziomy 
+<style>.intro{width:150px;height:75;overflow-x:scroll;}</style>
+spraw, aby przy użyciu klasy "intro" na stronie, przy uwzględnieniu szerokości 180 pikseli, marginesy ustawiały się automatycznie w zależności od nadrzędnych elementów 
+<style>.intro{width:180px;margin:auto;}</style>
+zmień kolor wszystkich elementów p na stronie, które są podrzędne w stosunku do elementów div, na ciemnoczerwony 
+<style>div p{color:darkred;}</style>
+zmień kolor wszystkoch elementów p na stronie, które są bezpośrednimi "dziećmi" elementów div, na ciemnoniebieski 
+<style>div>p{color:darkblue;}</style>
+zmień kolor pierwszego elementu p na stronie, który występuje bezpośrednio po elemencie div, na czerwony 
+<style>div+p{color:red;}</style>
+zmień kolor elementów p na stronie, które są "rodzeństwem" elementu div, na niebieski 
+<style>div~p{color:blue;}</style>
+spraw, żeby po najechaniu kursorem na linki na stronie kolor ich tła zmienił się na różowy 
+<style>a:hover{background-color:pink;}</style>
+spraw, aby po najechaniu kursorem na element klasy "new_class" na stronie zmienił się kolor ich tła na limonkowy 
+<style>.new_class:hover{background-color:lime;}</style>
+określ kolor tła elementów p na stronie, które są pierwszym "dzieckiem" jakiegokolwiek elementu, na żółty 
+<style>p:first-child{background-color:yellow;}</style>
+określ kolor tła elementów typu input, które są w "centrum uwagi", na złoty 
+<style>input:focus{background-color:gold;}</style>
+zmień kolor tła pierwszych linijek elementów powiązanych z klasą "klasaa" na szary 
+<style>.klasaa::first-line{background-color:grey;}</style>
+zmień kolor pierwszych liter elementów związanych z klasą "klasab" na zielony 
+<style>.klasab::first-letter{color:green;}</style>
+określ nieprzezroczystość obrazków na stronie na poziomie 0.7 
+<style>img{opacity:0.7;}</style>
+określ domyślną nieprzezroczystość obrazków na stronie jako 0.4 oraz ich nieprzezroczystość po najechaniu kursorem jako 1.0 
+<style>img{opacity:0.4;}img:hover{opacity:1.0;}</style>
+określ kolor elementów a na stronie, które posiadają atrybut target, jako purpurowy 
+<style>a[target]{color:purple;}</style>
+określ kolor tła dla linków na stronie, które posiadają atrybut target: "_blank", jako szary 
+<style>a[target="_blank"]{background-color:grey;}</style>
+określ granicę dla elementów img na stronie posiadających atrybut title zawierający słowo "landscape": grubość - 4 piksele, linia kropkowana, czarna 
+<style>img[title~="landscape"]{border:4px dotted black;}</style>
+określ granicę dla elementów img na stronie posiadających atrybut title zaczynający się na "a": grubość - 4 piksele, linia kreskowana, granatowa 
+<style>img[title^="a"]{border:4px dashed navy;}</style>
+określ granicę dla elementów img na stronie posiadających atrybut title kończący się na "ski": grubość - 3 piksele, linia ciągła, niebieska 
+<style>img[title$="ski"]{border:3px solid blue;}</style>
+określ granicę dla elementów img na stronie posiadających atrybut title zawierający "ed": grubość - 2 piksele, linia kropkowana, fioletowa 
+<style>img[title*="ed"]{border:2px dotted violet}</style>
+określ tło pudrowoniebieskie oraz zaokręglenie granic elementów div na stronie o rozmiarze 8 pikseli 
+<style>div{background:powderblue;border-radius:8px;}</style>
+dla elementów div na stronie określ tło łososiowe oraz dodaj zaokrąglenie dolnej prawej części granic o rozmiarze 9 pikseli 
+<style>div{background:salmon;border-bottom-right-radius:9px;}</style>
+użyj pliku "brd.png", aby nadać elementom div ramkę z powtarzającego się, "zestretchowanego" obrazka, o wartości slice 30 
+<style>div{border-image-source:url('brd.png');border-image-repeat:stretch;border-image-slice:30;}</style>
+dodaj dwa obrazki, "image0.gif" i "image1.gif", aby użyć ich jako tło dla elementu body na stronie; "image1.gif" ma być wyświetlony nad "image0.gif" 
+<style>body{background-image:url('image1.gif'),url('image0.gif');}</style>
+dodaj obrazek "image2.png" jako tło dla elementu body, określając rozmiar 75 na 50 pikseli i brak powtarzania 
+<style>body{background-image:url('image2.png');background-size:75px 50px; background-repeat:no-repeaat;}</style>
+dodaj obrazki "image3.jpg" i "image4.jpg" jako tło dla elementu body, określając brak powtarzania dla obu oraz rozmieszczenie: odpowiednio lewa góra i prawy dół 
+<style>body{background-image:url('image3.jpg'),url('image4.jpg');background-repeat:no-repeat,no-repeat;background-position:left top,right bottom;}</style>
+dodaj obrazek w tle dla elementu id "przyklad", określając: odsunięcie 25 pikseli, nazwa obrazka "image5.jpg", brak powtarzania, pozycję obrazka zależną od pozycji treści 
+<style>#przyklad{padding:25px;background-image:url('image5.jpg');background-repeat:no-repeat;background-origin:content-box;}</style>
+określ styl elementów p: kolor treści rgba(150,20,50,0.6) 
+<style>p{color:rgba(150,20,50,0.6);}</style>
+określ styl elementów h1: kolor tła hsl(0,80%,70%) 
+<style>h1{background-color:hsl(0,80%,70%);}</style>
+określ styl elementów h3: kolor tła hsla(0,100%,55%,0.5) 
+<style>h3{background-color:hsla(0,100%,55%,0.5);}</style.
+określ styl elementów h2: kolor rgb(55,190,144) i nieprzezroczystość 0.3 
+<style>h2{color:rgb(55,190,144);opacity:0.3;}</style>
+określ styl elementów div: tło w formie liniowego gradientu biało-niebieskiego 
+<style>div{background-image:linear-gradient(white,blue);}</style>
+określ styl elementów div: tło w formie liniowego gradientu skierowanego w prawo, szaro-pomarańczowego 
+<style>div{background-image:linear-gradient(to right,grey,orange);}</style>
+określ styl elementów div: tło w formie liniowego gradientu czarno-purpurowego przechodzącego w kierunku dolnym lewym 
+<style>div{background-image:linear-gradient(to bottom left,black,purple);}</style>
+określ styl elementów div: tło w formie liniowego gradientu żółto-niebieskiego obróconego o 75 stopni 
+<style>div{background-image:linear-gradient(75deg,yellow,blue);}</style>
+określ styl elementów div: tło w formie promieniowego gradientu zielono-czerwonego 
+<style>div{background-image:radial-gradient(green,red);}</style>
+określ styl elementów div: tło w formie promieniowego gradientu w kształcie okręgu w kolorze granatowo-złotym 
+<style>div{background-image:radial-gradient(circle,navy,gold);}</style>
+dodaj cień do tekstu w elementach h1 na stronie o rozmiarze 2 pikseli poziomo i 2 pikseli pionowo 
+<style>h1{text-shadow:2px 2px;}</style>
+dodaj cień do tekstu w elementach h1 na stronie o rozmiarze 3 pikseli poziomo i 3 pikseli pionowo, z rozmyciem o rozmiarze 4 pikseli oraz w kolorze niebieskim 
+<style>h1{text-shadow:3px 3px 4px blue;}</style>
+dodaj podwójny cień do elementów p na stronie: o rozmiarze 2 piksele na 2 piksele, z rozmyciem o wielkości 4 pikseli i w kolorze zielonym, oraz drugi o rozmiarze 3 piksele na 3 piksele, z rozmyciem o wielkości 6 pikseli i w kolorze niebieskim 
+<style>p{text-shadow:2px 2px 4px green,3px 3px 6px blue;}</style>
+dodaj cień typu "box" o wielkości 12 pikseli szerokości i 12 pikseli wysokości do elementów div na stronie 
+<style>div{box-shadow:12px 12px;}</style>
+spraw, aby białe przestrzenie w elementach p nie zawijały się, określ szerokość 100 pikseli, wstaw ramkę o grubości 1 pikseli w formie linii ciągłej czarnej, a dodatkowo ukryj nadmiar treści oraz spraw, aby ten nadmiar był sygnalizowany elipsą 
+<style>p{white-space:nowrap;width:100px;border:1px solid black;overflow:hidden;text-overflow:ellipsis;}</style>
+określ szerokość elementów p jako 120 pikseli, dodaj granicę o grubości 2 pikseli w formie linii kreskowanej w kolorze czarnym oraz spraw, aby następowało zawijanie tekstu typu break-word 
+<style>p{width:120px;border:2px dashed black;word-wrap:break-word;}</style>
+określ szerokość elementów p jako 160 pikseli, dodaj granicę o grubości 3 pikseli w formie linii kropkowanej w kolorze czarnym oraz spraw, aby przy zawijaniu słów następował podział wyrazów między dowolnymi literami 
+<style>p{width:160px;border:3px dotted black;word-break:break-all;}</style>
+dodaj czcionkę sieciową o nazwie "sansation", podając jej źródło: "sansation_light.woff" 
+<style>@font-face{font-family:sansation;src:url('sansation_light.woff');}body{font-family:sansation;}</style>
+przesuń treści elementów p o 70 pikseli poziomo i o -20 pikseli pionowo 
+<style>p{transform:translate(70px,-20px);}</style>
+obróć treści elementów div o 40 stopni 
+<style>div{transform:rotate(40deg);}</style>
+przeskaluj elementy h1: o 0.6 poziomo i 1.8 pionowo 
+<style>h1{transform:scale(0.6,1.8);}</style>
+zakrzyw treści elementów p: 25 stopni poziomo, 15 stopni pionowo 
+<style>p{transform:skew(25deg,15deg);}</style>
+obróć elementy h1 wokół osi x o 60 stopni 
+<style>h1{transform:rotatex(60deg);}</style>
+obróć elementy h2 wokół osi y o 45 stopni 
+<style>h2{transform:rotatey(45deg);}</style>
+obróć elementy h3 wokół osi z o 30 stopni 
+<style>h3{transform:rotatez(30deg);}</style>
+spraw, aby elementy p po najechaniu na nie kursorem zmieniły kolor z niebieskiego na czerwony 
+<style>p{color:blue;}p:hover{color:red;}</style>
+stwórz dla elementów h2 tło w formie kwadratu o szerokości 100 pikseli, wysokości 100 pikseli, w kolorze pudrowoniebieskim, które będzie zmieniało się przez 2 sekundy z opóźnieniem 0.5 sekundowym po najechaniu kursorem - zmieni szerokość na 300 pikseli 
+<style>h2{width:100px;height:100px;background:powderblue;transition:width 2s;transition-delay:0.5s;}h2:hover{width:300px;}</style>
+stwórz dla elementów h3 tło w formie prostokąta o szerkokości 120 pikseli, wysokości 90 pikseli, w kolorze pomarańczowym, które zmieni kolor w 2 sekundy i obróci się w 1 sekundę (nastąpi zmiana typu ease-in-out) po najechaniu kursorem: nowy kolor to skyblue, a obrót ma wynieść 180 stopni; obrót z treścią 
+<style>h3{width:120px;height:90px;background:orange;transition:background 2s;transform 1s;transition-timing-function:ease-in-out;}h3:hover{background:skyblue;transform:rotate(180deg);}</style>
+stwórz dla elementów div tło - prostokąt o szer. 100 px, wys. 100 px, pozycji względnej, w kolorze pomarańczowym, z animacją o nazwie example, sekwencją 3 sekundową, animacją zapętloną; na poz. 0% sekwencji ma kolor pomarańczowy i jest odsunięte od lewej krawędzi o 0 px, na poz. 50% jest żółte i odsunięte od lewej kraw. o 200 px, a na 100% jest jasnoniebieskie i przesunięte w lewo o 0 px; przesunięcie tła z treścią 
+<style>div{width:100px;height:100px;position:relative;background-color:orange;animation-name:example;animation-duration:3s;animation-iteration-count:infinite;}@keyframes example{0%{background-color:orange;left:0px;}50%{background-color:yellow;left:200px;}100%{background-color:lightblue;left:0px;}}</style>

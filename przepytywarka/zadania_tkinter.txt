@@ -1,0 +1,20 @@
+importuj wszystkie polecenia z modułu tkinter 
+from tkinter import *
+utwórz obiekt okna graficznego i wyznacz dla niego zmienną a 
+a=Tk()
+nadaj tytuł "q&a" oknu graficznemu zawartemu w zmiennej a 
+a.title("q&a")
+określ rozmiar 600 na 400 pikseli oknu graficznemu zawartemu w zmiennej a 
+a.geometry("600x400")
+do zbioru "przyciski" dodaj dla okna a przycisk "start"; uwzględnij funkcję "hit", która uruchomi się po kliknięciu przycisku 
+przyciski.append(Button(a,text="start",command=hit))
+stosując pętlę "for i" dla zbioru "przyciski", pozbądź się wszystkich przycisków zawartych w tym zbiorze; zapisz w jednej linijce 
+for i in przyciski:i.destroy()
+stwórz etykietę zawartą w zmiennej e, która należy do okna a i wyświetli informację "pytania i odpowiedzi" 
+e=Label(a,text="pytania i odpowiedzi")
+umieść etykietę e w oknie, tak aby wypełniła całą powierzchnię; dodatkowo uwzględnij podział elementów na równe części 
+e.pack(fill=BOTH,expand=YES)
+zastosuj pętle "for b" dla zmiennej "przyciski", aby rozmieścić przyciski w niej zawarte w oknie, tak żeby wypełniły równomiernie całą powierzchnię 
+for b in przyciski:b.pack(fill=BOTH,expand=YES)
+spraw, aby w oknie a po 3000 milisekundach uruchomiła się funkcja "poczatek" 
+a.after(3000,poczatek)

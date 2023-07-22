@@ -1,0 +1,50 @@
+importuj moduł pygame jako pg 
+import pygame as pg
+uruchom polecenie, które umożliwia swobodne korzystanie z poleceń modułu pygeme 
+pygame.init()
+stwórz okno o wymiarach 640 na 480 pikseli; wyznacz dla niego zmienną "obraz" 
+obraz=pygame.display.set_mode((640,480))
+wyznacz zmienną "fnt" zawierającą czcionkę "Verdana" o rozmiarze 15 
+fnt=pygame.font.SysFont("Verdana",15)
+wyznacz zmienną "rnd" zawierającą wyrenderowany tekst o czcionce z parametrami zawartymi w zmiennej "fnt", umieszczony w zmiennej "txt" przy zastosowaniu wygładzania krawędzi; tekst ma być w kolorze (200,150,100) 
+rnd=fnt.render(txt,1,(200,150,100))
+umieść wyrenderowaną treść zawartą w zmiennej "rnd" na ekreanie "obraz"; wyrenderowany obiekt ma mieć współrzędną (300,200) 
+obraz.blit(rnd,(300,200))
+odśwież ekran 
+pygame.display.update()
+stwórz pętlę "for eve" sprawdzającą wszytkie zdarzenia związane np z wciśnięciem danego klawisza 
+for eve in pygame.event.get():
+stwórz (umieszczony w pętli "for eve...") warunek związany z wciśnięciem ikonki "x" w prawym górnym rogu okna 
+if eve.type==pygame.QUIT:
+stwórz warunek (umieszczony w pętli "for eve...") związany z wciśnięciem danego klawisza 
+if eve.type==pygame.KEYDOWN:
+stwórz warunek (umieszczony w pętli "for eve...") związany z puszczeniem danego wciśniętego klawisza 
+if eve.type==pygame.KEYUP:
+wyznacz zmienną "graf" zawierającą obrazek "image.jpg" umieszczony w tym samym folderze, co bieżący plik .py 
+graf=pygame.image.load(os.path.join("image.jpg"))
+umieść na ekranie "obraz" grafikę "graf", stosując współrzędne (360,240) 
+obraz.blit(graf,(360,240))
+wczytaj plik audio "song.mp3" umieszczony w tym samym folderze, co bieżący plik .py 
+pygame.mixer.music.load(os.path.join("song.mp3"))
+odtwórz wczytany plik muzyczny 
+pygame.mixer.music.play()
+odwołaj wczytanie pliku muzycznego 
+pygame.mixer.music.unload()
+rozpocznij od nowa odtwarzanie pliku muzycznego 
+pygame.mixer.music.rewind()
+zatrzymaj odtwarzanie pliku muzycznego 
+pygame.mixer.music.stop()
+przerwij odtwarzanie pliku muzycznego 
+pygame.mixer.music.pause()
+wznów odtwarzanie pliku muzycznego 
+pygame.mixer.music.unpause()
+ustaw głośność odtwarzania pliku muzycznego na 0.5 
+pygame.mixer.music.set_volume(0.5)
+wyznacz zmienną "rct" zawierającą prostokąt o współrzędnych (100,80), szerokości 50 i wysokości 75 pikseli 
+rct=pygame.Rect(100,80,50,75)
+narysuj na ekranie "obraz" będący w kolorze (150,30,30) prostokąt zawarty w zmiennej "rct", wypełniony 
+pygame.draw.rect(obraz,(150,30,30),rct,0)
+stwórz warunek (umieszczony w pętli "for eve...") związany z użyciem klawisza spacji 
+if eve.key==pygame.K_SPACE:
+na ekreanie "obraz" narysuj okrąg w kolorze niebieskim o współrzędnych (200,200), promieniu 40 pikseli o grubości linii 4 
+pygame.draw.circle(obraz,blue,(200,200),40,4)

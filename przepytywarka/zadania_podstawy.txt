@@ -1,0 +1,210 @@
+wyświetl liczbę 3 
+print(3)
+wyświetl tekst "hej" 
+print("hej")
+wyświetl liczbę 4 w postaci zmiennoprzecinkowej 
+print(float(4))
+wyświetl zmienną a 
+print(a)
+wyświetl liczbę 5.0 jako całkowitą 
+print(int(5.0))
+wyświetl wynik mnożenia liczb 5 i 4 
+print(5*4)
+wyświetl wartość typu bool zmiennej s 
+print(bool(s))
+wyświetl znak o kodzie unicode 97 
+print(chr(97))
+wyświetl kod unicode znaku "A" 
+print(ord("A"))
+stwórz słownik dla zmiennych: name="John", age=36, wyznacz dla niego zmienną d 
+d=dict(name="John",age=36)
+wyznacz zmienną x dla wartości typu complex dla liczb 3 i 2 
+x=complex(3,2)
+wyświetl właściwości i metody zmiennej s 
+print(dir(s))
+sformatuj wartość 0.25 do postaci wartości procentowej, wyznacz dla niej zmienną a 
+a=format(0.25,"%")
+sformatuj liczbę 5000 do postaci 5.000000+03, wyznacz dla niej zmienną e 
+e=format(5000,"e")
+sformatuj liczbę 44 do postaci binarnej, wyznacz dla niej zmienną b 
+b=format(44,"b")
+sformatuj liczbę 75 do odpowiadającego jej znaku w standardzie unicode, wyznacz dla niej zmienną u 
+u=format(75,"c")
+wyświetl niezbędne informacje o programie 
+globals()
+wyświetl liczbę 255 w postaci szesnastkowej 
+print(hex(255))
+wyświetl wartość bezwzględną liczby -7.2 
+print(abs(-7.2))
+wyznacz zmienną a dla wartości bezwzględnej liczby -12 
+a=abs(-12)
+zamień listę L na niezmienny zbiór F 
+F=frozenset(L)
+poproś o podanie wartości typu integer zdaniem "podaj liczbę" 
+int(input("podaj liczbę"))
+poproś o podanie treści typu string zdaniem "podaj treść" 
+str(input("podaj treść"))
+wyświetl długość obiektu s 
+print(len(s))
+wyznacz zmienną d dla długości obiektu A 
+d=len(A)
+zaokrąglij liczbę 7.777 do dwóch miejsc po przecinku, wyznacz dla niej zmienną z 
+z=round(7.777,2)
+wyświetl liczbę 5.294 zaokrągloną do jednego miejsca po przecinku 
+print(round(5.294,1))
+wyznacz zmienną z dla zakresu liczb od 4 do 8 
+z=range(4,8)
+wyświetl elementy od 3 do 5 krotki a przy pomocy slice() 
+print(a[slice(3,5)])
+wyświetl elementy od 2 do 4 krotki s 
+print(s[2:4])
+wyznacz zmienną z dla elementów od 0 do 4 zbioru a 
+z=a[:4]
+wyświetl elementy zbioru d od 3 do ostatniego 
+print(d[3:])
+wyświetl elementy zbioru a w kolejności np. alfabetycznej 
+print(sorted(a))
+wyświetl typ zmiennej s 
+print(type(s))
+otwórz plik "file.txt" w trybie do zapisu i odczytu, wyznacz dla niego zmienną p 
+p=open("file.txt","w+")
+otwórz plik "file.txt" w trybie do odczytu, wyznacz dla niego zmienną r 
+r=open("file.txt","r")
+otwórz plik "file.txt" w trybie do zapisu, wyznacz dla niego zmienną a 
+a=open("file.txt","w")
+w pliku zawartym w zmiennej Fil zapisz zawartość zmiennej s 
+Fil.write(s)
+w pliku zawartym w zmiennej plk zapisz zawartość zmiennej d wraz ze znakiem nowej linijki 
+plk.write(d+"\n")
+otwórz plik "plik.txt" w trybie do odczytu i zapisu wraz z systemem kodowania utf-8, wyznacz dla niego zmienną f 
+f=open("plik.txt","r+",encoding="utf-8")
+importuj moduł math jako mt 
+import math as mt
+z modułu pygame importuj wszystko 
+from pygame import *
+zamknij otwarty plik tekstowy zawarty w zmiennej fil 
+fil.close()
+wyznacz listę n zawierającą elementy typu str z listy lst o długości mniejszej lub równej 5 znaków (użyj for i, zapisz w jednej linijce) 
+n=[i for i in lst if len(i)<=5]
+wyznacz listę a zawierającą elementy z listy lst sprawdzane przy użyciu for x (w jednej linijce) 
+a=[x for x in lst]
+wyznacz listę s z elementami z listy range w zakresie od 2 do 5 (użyj for i, zapisz w jednej linijce) 
+s=[i for i in range(2,5)]
+wyznacz listę d, używając for x, zawierającą elementy z listy range o zakresie do 10, gdzie x jest większe niż 5 (zapisz w jednej linijce) 
+d=[x for x in range(10) if x>5]
+wyznacz listę a z elementami z listy lst typu str (użyć for x) z zamienionymi małymi literami na wielkie (zapisz w jednej linijce) 
+a=[x.upper() for x in lst]
+wyznacz listę x, zawierającą elementy z listy lst typu str dłuższe niż 5 znaków, oraz wyraz "orange" zastępujący elementy niespełniające warunku (użyj for i, zapisz w jednej linijce) 
+x=[i if len(i)>5 else "orange" for i in lst]
+ułóż elementy typu str z listy L w kolejności alfabetycznej, ale odwróconej 
+L.sort(reverse=True)
+ułóż elementy typu int z listy a w kolejności od największej do najmniejszej wartości 
+a.sort(reverse=True)
+usuń element "zielony" z listy kolory 
+kolory.remove("zielony")
+zabierz element o indeksie 4 z listy lista 
+lista.pop(4)
+wyświetl element zabrany z listy l, który był na jej końcu 
+print(l.pop())
+wstaw element "blue" do listy l, nadając jej nr indeksu 2, bez zastępowania pozostałych elementów listy 
+l.insert(2,"blue")
+wyświetl, ile razy występuje wartość 4 w krotce Tpl 
+print(Tpl.count(4))
+wyświetl nr indeksu wartości "val" w krotce tpl 
+print(tpl.index("val"))
+wyświetl zbiór st z dodanym słowem "green" 
+print(st.add("green"))
+zaktualizuj zbiór s1 poprzez powiększenie go o zawartość zbioru s2 
+s1.update(s2)
+zaktualizuj zbiór s3 poprzez powiększenie go o zawartość listy l4
+s3.update(l4)
+wyznacz zmienną z zawierającą słowo "Hello" zapisane wielkimi literami 
+z="Hello".upper()
+wyświetl słowo "Hello" zapisane małymi literami 
+print("Hello".lower())
+usuń słowo "yellow" ze zbioru a 
+a.remove("yellow")
+zabierz ze zbioru s losową wartość, umieść w zmiennej d 
+d=s.pop()
+wyczyść zbiór Zb 
+Zb.clear()
+usuń zbiór zd 
+del zd
+sprawdź, czy słowo "cherry" jest w zbiorze fruits, wyświetl wynik 
+print("cherry" in fruits)
+wyświetl zbiory z1 i z2 bez elementów wspólnych 
+print(z1.difference(z2))
+usuń ze zbioru z4 elementy, które występują także w zbiorze z5 
+z4.difference_update(z5)
+wyznacz zmienną s zawierającą elementy wspólne dla zbiorów x i y 
+s=x.intersection(y)
+usuń ze zbioru s2 elementy, które nie występują w zbiorze d2 
+s2.intersection_update(d2)
+stwórz zbiór z zawierający elementy zbioru x i y bez elementów powtarzających się 
+z=x.symmetric_difference(y)
+w zbiorze a umieść elementy ze zbiorów a i s, ale bez elementów powtarzających się 
+a.symmetric_difference_update(s)
+dodaj do zbioru x elementy zbioru y, wyświetl zaktualizowany zbiór 
+print(x.union(y))
+zaktualizuj zbiór s poprzez dodanie do niego elementów listy f 
+s.update(f)
+wyznacz listę cp będącą kopią listy ls 
+cp=ls.copy()
+wyświetl wartość dla klucza "key" w słowniku dct 
+print(dct["key"])
+wyznacz zmienną ks zawierającą klucze słownika dc 
+ks=dc.keys()
+wyświetl wartości ze słownika dc 
+print(dc.values())
+wyświetl "A" jeśli a>b, a jeśli nie, to wyświetl "B" (zapisz w jednej linijce) 
+print("A") if a>b else print("B")
+zakończ pracę z plikiem zawartym w zmiennej file 
+file.close()
+wyświetl wszystkie elementy listy Ls oddzielone spacją  
+print(*Ls)
+wyznacz zmienną A zawierającą funkcję typu lambda, która zwraca wynik mnożenia dwóch liczb x i y 
+A=lambda x,y:x*y
+wyznacz zmienną Sa zawierającą funkcję typu lambda, która zwraca wynik dodawania trzech liczb: z, x i y 
+Sa=lambda z,x,y:z+x+y
+wyznacz zmienną S zawierającą funkcję typu lambda, która zwraca liczbę z podzieloną przez 2 
+S=lambda z:z/2
+w klasie Member dziedziczącej z klasy Team odziedzicz funkcję __init__() (funkcja __init__() posiada parametry name i surname)
+Team.__init__(self,name,surname)
+w klasie Member dziedziczącej z klasy Team odziedzicz wszystkie funkcje i metody (funkcja __init__() posiada parametry name i surname) 
+super().__init__(name,surname)
+wybierz minimalną wartość z listy listA, wyznacz dla niej zmienną A 
+A=min(listA)
+wybierz maksymalną wartość z listy listX, wyznacz dla niej zmienną X 
+X=max(listX)
+wyznacz zmienną S dla liczby -3.75 zamienionej na dodatnią 
+S=abs(-3.75)
+wyznacz zmienną P dla wyniku działania: 4 do potęgi 3 
+P=pow(4,3)
+wyświetl tekst "this item costs ${}", formatując tekst tak, żeby klamry zastąpiła wartość 15 
+print("this item costs ${}".format(15))
+wstaw w tekście zawartym w zmiennej Txt o treści "These items cost ${} and ${}" wartości odpowiednio 20 i 30, wyznacz dla sformatowanego tekstu wartość fTxt 
+fTxt=Txt.format(20,30)
+wyświetl tekst "Cars: {}, {}, {}" zawarty w zmiennej Cs z wyrazami z listy cars=["Volvo","Fiat","Subaru"] w kolejności odpowiednio 1, 3 i 2 w liście 
+print(Cs.format(cars[0],cars[2],cars[1]))
+wstaw w tekście "There's {} liters of water" wartość 7.5452 z dwiema cyframi po kropce; wyznacz zmienną L dla wyniku 
+L="There's {:.2f} liters of water".format(7.5452)
+wstaw wartości 55, 10, 42 w kolejności 3, 1, 2 do tekstu "values: {}, {}, {}", gdzie liczba 10 ma mieć 3 miejsca po przecinku; wyznacz dla rezultatu zmienną Val 
+Val="values: {2}, {0}, {1:.3f}".format(55,10,42)
+zapisz w pliku zawartym w zmiennej "file" elementy listy qList o indeksie do 12 (wyłączając 12) wraz z rozpoczęciem pisania od nowej linijki (zapisać w jednej linijce; użyć "for i") 
+for i in range(12):file.write(qList[i]+"\n")
+wyświetl zmienną a z napisem " New York " bez spacji na początku i na końcu 
+print(a.strip())
+wyświetl napis "berry, best" z zamienionymi literami "b" na "ch" 
+print("berry, best".replace("b","ch"))
+wyznacz listę B powstałą poprzez podzielenie nazwy miasta "Bielsko-Biała" w miejscu znaku "-" 
+B="Bielsko-Biała".split("-")
+wyznacz zmienną R zawierającą resztę z dzielenia liczby 44 przez 7 
+R=44%7
+określ funkcję Team, w której liczba argumentów Players jest nieznana 
+def Team(*Players):
+określ funkcję Company, w której liczba argumentów Workers typu keyword jest nieznana 
+def Company(**Workers):
+wykonaj funkcję Person, wpisując dwa argumenty typu keyword: name: James, surname: Johnson 
+Person(name="James",surname="Johnson")
+określ funkcję Państwa z argumentem country, gdzie domyślnym argumentem będzie "Finlandia" 
+def Państwa(country="Finlandia"):

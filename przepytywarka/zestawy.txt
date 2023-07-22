@@ -1,0 +1,10 @@
+podstawy
+random
+html
+pygame
+css
+tkinter
+django
+stereometria
+europejskie_stolice
+rozmówki_angielskie

@@ -1,0 +1,266 @@
+napisz nagłówek o rozmiarze 2 i treści "New Heading" 
+<h2>New Heading</h2>
+napisz paragraf o treści "First paragraph." 
+<p>First paragraph.</p>
+napisz deklarację dla HTML5 
+<!DOCTYPE html>
+podaj link do strony https://bitcoin.org i zatytułuj go jako "BTC" 
+<a href="https://bitcoin.org">BTC</a>
+zdefiniuj obraz "w3schools.jpg" wraz z alternatywnym tekstem "W3Schools.com", o szerokości 120 pikseli i wysokości 160 pikseli 
+<img src="w3schools.jpg" alt="W3Schools.com" width="120" height="160">
+napisz paragraf o treści "This is a paragraph.", podziel na dwie linijki pomiędzy wyrazem "is" i "a" 
+<p>This is<br>a paragraph.</p>
+wyświetl obraz "a_tree.jpg" o szerokości 300 pikseli i wysokości 400 pikseli 
+<img src="a_tree.jpg" width="300" height="400">
+napisz paragraf o treści "silver paragraph" w kolorze srebrnym 
+<p style="color:silver;">silver paragraph</p>
+podaj dodatkową informację o treści "info" do paragrafu o treści "a paragraph" 
+<p title="info">a paragraph</p>
+napisz nagłówek "Heading" o rozmiarze 1, ale z rozmiarem czcionki 30 pikseli 
+<h1 style="font-size:30px;">Heading</h1>
+stwórz linię oddzielającą paragrafy lub nagłówki 
+<hr>
+określ kolor tła jako jasnoszary 
+<body style="background-color:lightgrey;">
+określ kolor tła nagłówka "Gold Heading" jako złoty 
+<h1 style="background-color:gold;">Gold Heading</h1>
+określ kolor tła paragrafu "salmon paragraph" jako łososiowy 
+<p style="background-color:salmon;">salmon paragraph</p>
+określ arial jako czcionkę nagłówka "Head" o rozmiarze 1 
+<h1 style="font-family:arial;">Head</h1>
+wyświetl treść paragrafu "paragraph" w rozmiarze 300% 
+<p style="font-size:300%;">paragraph</p>
+wyświetl wyśrodkowany tekst paragrafu "centered paragraph" 
+<p style="text-align:center;">centered paragraph</p>
+napisz "italic text" kursywą 
+<i>italic text</i>
+napisz "bold text" pogrubioną czcionką 
+<b>bold text</b>
+napisz paragraf o treści "bold text paragraph" pogrubioną czcionką 
+<p><b>bold text paragraph</b></p>
+napisz tekst "marked text" zaznaczony kolorem 
+<mark>marked text</mark>
+napisz przekreślony nagłówek "Deleted Header" o rozmiarze 2 
+<h2><del>Deleted Header</del></h2>
+napisz podkreślony nagłówek "Inserted Header" 
+<h1><ins>Inserted Header</ins></h1>
+napisz "subscript text" pomniejszoną czcionką - indeks dolny 
+<sub>subscript text</sub>
+napisz "superscript" pomniejszoną czcionką - indeks górny 
+<sup>superscript</sup>
+wyróżnij tekst "Important text!" 
+<strong>Important text!</strong>
+napisz paragraf "a bit smaller" nieco mniejszą czcionką 
+<p><small>a bit smaller</small></p>
+umieść cytat ze strony https://bitcoin.org "Bitcoin to innowacyjna sieć płatności" 
+<blockquote cite="https://bitcoin.org">Bitcoin to innowacyjna sieć płatności</blockquote>
+umieść krótki cytat "Bitcoin:"nowy rodzaj pieniądza"" 
+Bitcoin:<q>nowy rodzaj pieniądza</q>
+napisz "right to left" odwrotnie 
+<bdo dir="rtl">right to left</bdo>
+zaznacz tytuł "The King's Speech" w paragrafie 
+<p><cite>The King's Speech</cite></p>
+napisz komentarz "This is a comment" nie wpływający na kod 
+<!--This is a comment-->
+napisz nagłówek "Hej!" o rozmiarze 1 z purpurowym obramieniem o grubości 2 pikseli 
+<h1 style="border:2px solid purple;">Hej!</h1>
+napisz paragraf "RGB" z tłem o kolorze rgb(100,150,200) 
+<p style="background-color:rgb(100,150,200);">RGB</p>
+napisz nagłówek "Head" o rozmiarze 1 z tłem w kolorze hsl(50,25%,75%) 
+<h1 style="background-color:hsl(50,25%,75%);">Head</h1>
+napisz paragraf "Alpha" z tłem o kolorze hsla(148,62%,50%,0.2) 
+<p style="background-color:hsla(148,62%,50%,0.2);">Alpha</p>
+ustaw wszystkie nagłówki o rozmiarze 1 na stronie w kolorze niebieskim 
+<style>h1{color:blue;}</style>
+ustaw kolor tła na całej stronie jako pudrowoniebieski 
+<style>body{background-color:powderblue;}</style>
+ustaw tło dla wszystkich paragrafów na stronie jako srebrny 
+<style>p{background-color:silver;}</style>
+zdefiniuj styl na wielu stronach 
+<head><link rel="stylesheet" href="styles.css"></head>
+ustaw czcionkę verdana na całej stronie dla wszystkich paragrafów 
+<style>p{font-family:verdana;}</style>
+ustaw wielkość czcionki dla wszystkich nagłówków na stronie o rozmiarze 1 jako 300% 
+<style>h1{font-size:300%;}</style>
+napisz paragraf z linkiem do strony "https://www.google.com/" o tytule "Google" 
+<p><a href="https://www.google.com/">Google</a></p>
+napisz paragraf z lokalnym linkiem do "html_images.asp" o tytule "HTML Images" 
+<p><a href="html_images.asp">HTML Images</a></p>
+podaj link do strony "https://www.images.com/" w formie obrazka "images.jpg" z alternatywną nazwą "images" i rozmiarem 100x50 pikseli 
+<a href="https://www.images.com/"><img src="images.jpg" alt="images" style="width:100px;height:50px;"></a>
+umieść link do adresu email "lukasz@mail.com" o tytule "Send email" 
+<a href="mailto:lukasz@mail.com">Send email</a>
+stwórz ikonkę z linkiem do lokalnej strony "document.location='default.asp'" o tytule "HTML Tutorial" (z kodem JavaScript) 
+<button onclick="document.location='default.asp'">HTML Tutorial</button>
+umieść link do strony "https://www.bing.com" z dodatkową informacją "wyszukaj" i o tytule "Bing" 
+<a href="https://www.bing.com" title="wyszukaj">Bing</a>
+otwórz stronę "https://www.strona.pl" o tytule "Strona" w nowym oknie lub karcie 
+<a href="https://www.strona.pl" target="_blank">Strona</a>
+umieść w paragrafie link do rozdziału 5 na stronie i zatytuuj go "Chapter 5" 
+<p><a href="#C5">Chapter 5</a></p>
+umieść obrazek "picture.jpg" z alternatywną nazwą "pctr" 
+<img src="picture.jpg" alt="pctr">
+umieść obrazek "landscape.jpg", podaj alternatywną nazwę jako "landscape" i ustaw jego rozmiar na 500x300 pikseli 
+<img src="landscape.jpg" alt="landscape" style="width:500px;height:300px;">
+ustaw szerokość wszystkich obrazków na stronie jako 150% 
+<style>img{width:150%;}</style>
+umieść obrazek ze strony "https://www.obrazki.com/images/obrazek.jpg" i użyj alternatywnej nazwy "obrazek" 
+<img src="https://www.obrazki.com/images/obrazek.jpg" alt="obrazek">
+umieść w paragrafie animowany obrazek "smile2.gif" z alternatywną nazwą "S2", umiejscowieniem po lewej stronie tekstu oraz rozmiarem 40x40 pikseli; treść tekstu: "Animowany obrazek po lewej stronie" 
+<p><img src="smile2.gif" alt="S2" style="float:left;width:40px;height:40px;">Animowany obrazek po lewej stronie</p>
+zdefiniuj mapę obrazową przy użyciu pliku "mapa.jpg" z alternatywną nazwą "map" i nazwą mapy "s_mapa" 
+<img src="mapa.jpg" alt="map" usemap="#s_mapa">
+określ interaktywną prostokątną powierzchnię zdefiniowanej mapy obrazowej "s_mapa" o współrzędnych 40x30 do 100x75, alternatywną nazwą "strefa" i lokalnym adresem "str.htm" 
+<map name="s_mapa"><area shape="rect" coords="40,30,100,75" alt="strefa" href="str.htm"></map>
+stwórz skrypt JavaScript o nazwie "funkcja", który wyświetli informację "kliknąłeś na obszar" 
+<script>function funkcja(){alert("kliknąłeś na obszar");}</script>
+na interaktywnej mapie o nazwie "workmap" z obszarem w kształcie koła o współrzędnych i rozmiarze 200,250,55, adresem lokalnym "circle.htm" wyznacz nazwę funkcji "funkcja" dla skryptu 
+<map name="workmap"><area shape="circle" coords="200,250,55" href="circle.htm" onclick="funkcja()"></map>
+umieść w tle na całej stronie powtarzający się obrazek "pic.png" 
+<style>body{background-image:url('pic.png');}</style>
+umieść nie powtarzający się obrazek "picture2.jpg" w tle na całej stronie 
+<style>body{background-image:url('picture2.jpg');background-repeat:no-repeat;}</style>
+umieść w tle obrazek "img.jpg", nie przewijający się, pokrywający rozmiarem stronę 
+<style>body{background-image:url('img.jpg');background-attachment:fixed;background-size:cover;}</style>
+umieść w tle na całej stronie "landscape.png", który podczas przewijania treści pozostaje w miejscu oraz jest rozciągnięty na 100% szerokości i wysokości 
+<style>body{background-image:url('landscape.png');background-attachment:fixed;background-size:100%100%;}</style>
+umieść w tle w paragrafie pod tekstem "obrazek w tle" obrazek "picture.jpg" 
+<p style="background-image:url('picture.jpg');">obrazek w tle</p>
+wyświetl obrazek w zależności od rozmiaru okna przeglądarki, gdzie "obrazek_1.jpg" wyświetli się przy szerokości min. 400 pikseli, "obrazek_2.jpg" wyświetli się przy szerokości min. 600 pikseli, a "rezerwowym" obrazkiem jest "a_picture.png", który posiada alternatywną nazwę "a" oraz styl - szerokość automatyczną 
+<picture><source media="(min-width:400px)" srcset="obrazek_1.jpg"><source media="(min-width:600px)" srcset="obrazek_2.jpg"><img src="a_picture.png" alt="a" style="width:auto;"></picture>
+wyświetl obrazek "pic.png" lub "pic.jpg", jeśli pierwszy będzie nieobsługiwany, lub "pic.gif" jako "rezerwowy", gdy nie wyświetlą się poprzednie; "pic.gif" ma mieć alternatywną nazwę "pics" oraz automatyczną szerokość 
+<picture><source srcset="pic.png"><source srcset="pic.jpg"><img src="pic.gif" alt="pics" style="width:auto;"></picture>
+określ tytuł strony jako "Tytuł strony" i umieść jej ikonę o nazwie "favicon.ico" umieszczoną w folderze "images" projektu 
+<title>Tytuł strony</title><link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+określ tytuł strony jako "My Website" 
+<title>My Website</title>
+stwórz tabelę rozciągniętą na 80% szerokości strony, w której umieścisz w pierwszej kolumnie osoby ("Person"), a w drugiej państwo ("Country"); drugi wiersz ma zawierać nazwisko "Smith" i państwo "UK", a trzeci "Kowalski" i "Mexico" 
+<table style="width:80%;"><tr><th>Person</th><th>Country</th></tr><tr><td>Smith</td><td>UK</td></tr><tr><td>Kowalski</td><td>Mexico</td></tr></table>
+stwórz małą tabelę jednowierszową, gdzie w pierwszej kolumnie będzie nazwa miasta "Vienna", a w drugiej "Austria" 
+<table><tr><td>Vienna</td><td>Austria</td></tr></table>
+spraw, żeby elementy: table, th i td miały granicę o grubości 2 pikseli w postaci ciągłej linii w kolorze niebieskim, przy czym linia ma być pojedyncza 
+<style>table,th,td{border:2px solid blue;border-collapse:collapse;}</style>
+ustal właściwości tabel na stronie, aby wszystkie ich elementy miały granice w formie białej linii o grubości jednego piksela, pojedynczej, a także tło w kolorze #96D4D4 
+<style>table,th,td{border:1px solid white;border-collapse:collapse;background-color:#96D4D4;}</style>
+ustal właściwości tabeli na stronie, aby grubość linii wynosiła 2 piksele, ich kolor był szary oraz żeby były zaokrąglone (zaokrąglenie wielkości 7 pikseli) 
+<style>table,th,td{border:2px solid grey;border-radius:7px;}</style>
+ustal własciwości tabel na stronie, aby komórki miały granice składające się z kropek 
+<style>th,td{border-style:dotted;}</style>
+ustal właściwości tabel na stronie, aby komórki miały granice składające się z kresek 
+<style>th,td{border-style:dashed;}</style>
+ustal właściwości tabeli na stronie, aby komórki miały granice z efektem trójwymiarowości (wklęsłe) 
+<style>th,td{border-style:inset;}</style>
+ustal właściwości tabel na stronie, aby komórki nie miały widocznych granic 
+<style>th,td{border-style:none;}</style>
+ustal właściwości tabel na stronie, aby komórki posiadały ukryte granice 
+<style>th,td{border-style:hidden;}</style>
+ustal właściwości tabel na stronie, aby granice komórek były w formie linii i miały kolor #96D4D4 
+<style>th,td{border-style:solid;border-color:#96D4D4;}</style>
+stwórz małą tabelę jednowierszową, gdzie pierwsza kolumna będzie miała szerokość 70% i zawierała tekst "niebieski", a druga zawierała tekst "zielony" 
+<table><tr><td style="width:70%;">niebieski</td><td>zielony</td></tr></table>
+stwórz małą tabelę jednokolumnową, w której pierwszy wiersz ma treść "UK", a drugi "USA" i ma wysokość 50 pikseli 
+<table><tr><td>UK</td></tr><tr style="height:50px;"><td>USA</td></tr></table>
+ustal właściwości tabeli, aby nagłówki miały tekst przesunięty w prawo 
+<style>th{text-align:right;}</style>
+ustal odległość tekstu w tabelach na stronie od granic komórek jako 10 pikseli 
+<style>th,td{padding:10px;}</style>
+ustal grubość granic komórek w tabelach na stronie jako 20 pikseli 
+<style>th,td{border-spacing:20px;}</style>
+ustal odległość tekstu od granic komórek w tabelach na stronie: 10 pikseli od górnej granicy, 20 pikseli od dolnej granicy, 30 pikseli od lewej granicy, 40 pikseli od prawej granicy 
+<style>th,td{padding-top:10px;padding-bottom:20px;padding-left:30px;padding-right:40px;}</style>
+spraw, aby szerokość jednej komórki z treścią "James" obejmowała dwie kolumny 
+<td colspan="2">James</td>
+spraw, aby wysokość jednej komórki z treścią "Mary" obejmowała dwa wiersze 
+<td rowspan="2">Mary</td>
+ustal tło co drugiego wiersza tabel na stronie, w celu ułatwienia czytania treści, w kolorze #D6EEEE 
+<style>tr:nth-child(even){background-color:#D6EEEE;}</style>
+spraw, aby wiersze w tabelach na stronie po najechaniu na nie kursorem miały tło w kolorze rgba(100,160,220,0.4) 
+<style>tr:hover{background-color:rgba(100,160,220,0.4);}</style>
+stwórz nieuporządkowaną listę składającą się z elementów: "książka", "telefon", "piłka" 
+<ul><li>książka</li><li>telefon</li><li>piłka</li></ul>
+stwórz uporządkowaną listę składającą się z elementów: "pizza", "kebab", "burger" 
+<ol><li>pizza</li><li>kebab</li><li>burger</li></ol>
+stwórz listę z dodatkowymi opisami elementów: "kawa" z opisem "czarny napój" oraz "mleko" z opisem "biały napój" 
+<dl><dt>kawa</dt><dd>czarny napój</dd><dt>mleko</dt><dd>biały napój</dd></dl>
+stwórz nieuporządkowaną listę z elementami: "jabłko", "gruszka" z kółkami przed każdą pozycją 
+<ul style="list-style-type:circle;"><li>jabłko</li><li>gruszka</li></ul>
+spraw, aby przed elementami listy nieuporządkowanej były kropki 
+<ul style="list-style-type:disc;">
+spraw, aby przed elementami listy nieuporządkowanej były kwadraty 
+<ul style="list-style-type:square;">
+spraw, aby przed elementami listy nieuporządkowanej nie było żadnych znaków 
+<ul style="list-style-type:none;">
+stwórz listę w liście (nieuporządkowane), gdzie podana zostanie pozycja "herbata" oraz jej dwa rodzaje: "zielona" i "czarna" (w wewnętrznej liście) 
+<ul><li>herbata<ul><li>zielona</li><li>czarna</li></ul></li></ul>
+spraw, aby elementy listy uporządkowanej oznaczone były wielkimi literami 
+<ol type="A">
+spraw, aby elementy listy uporządkowanej oznaczone były małymi rzymskimi liczbami 
+<ol type="i">
+spraw, aby elementy listy uporządkowanej oznaczone były wielkimi rzymskimi liczbami, które zaczynają się od 20 
+<ol type="I" start="20">
+napisz "Hello" w paragrafie; grubość obramienia to 2 piksele, styl to przerywana kreska, a kolor - pomarańczowy 
+<p style="border:2px dashed orange;">Hello</p>
+Napisz w paragrafie "United States of America", stosując czarne obramienie o grubości 2 pikseli wokół słowa "States" 
+<p>United <span style="border:2px solid black;">States</span> of America</p>
+Napisz "Dzień dobry" w paragrafie typu div (który może m.in. zawierać nagłówki i paragrafy), stosując czarny kolor tła, białą czcionkę i odsunięcie tekstu od krawędzi wielkości 25 pikseli 
+<div style="background-color:black;color:white;padding:25px;">Dzień dobry</div>
+wewnątrz paragrafu umieśc słowo "ciemnooliwkowy", które ma (w przeciwieństwie do reszty tekstu) kolor ciemnooliwkowy i pogrubioną czcionkę 
+<span style="color:darkolivegreen;font-weight:bold;">ciemnooliwkowy</span>
+zastosuj w sekcji (div) zdefiniowaną wcześniej klasę "new_class" określającą właściwości tekstu i umieść w niej paragraf z treścią "To jest nowa sekcja" 
+<div class="new_class"><p>To jest nowa sekcja</p></div>
+stwórz klasę "class1" z właściwościami tekstu: limonkowy kolor tła, ciemnofioletowy kolor czcionki, odsunięcie tekstu od krawędzi tła 15 pikseli 
+<style>.class1{background-color:lime;color:darkviolet;padding:15px;}</style>
+stwórz klasę typu id (może zostać użyta 1 raz na stronie) o nazwie "newID", która zawiera właściwości: kolor tła jasnoniebieski, tekst wyśrodkowany 
+<style>#newID{background-color:lightblue;text-align:center;}</style>
+umieść w ramce obrazek "img.jpg", ustal szerokość ramki jako 300 pikseli, wysokość 400 pikseli oraz dodaj informację title "example" 
+<iframe src="img.jpg" width="300" height="400" title="example"></iframe>
+w paragrafie umieść link do strony, która otworzy się w ramce; link do strony: "https://www.ledger.com", nazwa umieszczona w kodzie ramki to "iframe_a", a wyświetlony tytuł strony to "Ledger" 
+<p><a href="https://www.ledger.com" target="iframe_a">Ledger</a></p>
+stwórz interaktywny element przy użyciu funkcji "nowaFunkcja" i klasy typu id "demonstracja", który zmieni podany wcześniej tekst na "Witaj, JavaScript!" 
+<script>function nowaFunkcja(){document.getElementById("demonstracja").innerHTML="Witaj, JavaScript!";}</script>
+dodaj informację typu meta o kodowaniu "UTF-8" 
+<meta charset="UTF-8">
+ustal, że paski nawigacji po prawej stronie będą miały tekst przesunięty w lewą stronę, szerokość 20%, wysokość 300 pikseli, tło #ccd (kolor) i odsunięcie tekstu 20 pikseli 
+<style>nav{float:left;width:20%;height:300px;background:#ccd;padding:20px;}</style>
+określ właściwości stopki na stronie:kolor tła #7a6 i odsunięcie tekstu 10 pikseli 
+<style>footer{background:#7a6;padding:10px;}</style>
+wyświetl tekst w paragrafie, którego czcionka będzie miała wielkość 10% wyświetlanego obszaru; treść: "Czcionka o wielkości 10% obszaru" 
+<p style="font-size:10vw;">Czcionka o wielkości 10% obszaru</p>
+w paragrafie wyświetl trzy znaki "Euro", pierwszy przy pomocy nazwy symbolu (&euro, drugi przy pomocy zapisu dziesiętnego (&#8364), a trzeci przy pomocy zapisu szesnastkowego (&#x20AC) 
+<p>&euro;&#8364;&#x20AC;</p>
+wyświetl w paragrafie emoji &#128516 
+<p>&#128516;</p>
+wyświetl obok siebie dwa emoji wielkości 52 pikseli: &#128516 i &#128525 
+<p style="font-size:52px;">&#128516;&#128525;</p>
+określ właściwości bocznych części strony aside: umiejscowienie po prawej stronie, szerokość 30%, odsunięcie od lewej krawędzi 15%, kolor tła jasnoszary 
+<style>aside{float:right;width:30%;padding-left:15%;background-color:lightgrey;}</style>
+napisz w sekcji typu section paragraf z treścią "Dobry wieczór", określając jej właściwości: szerokość 55%, kolor tła żółty 
+<section style="width:55%;background-color:yellow;"><p>Dobry wieczór</p></section>
+stwórz stopkę, która zawiera paragraf z treścią "Author: John Smith" oraz w nowej linijce link do adresu email "j.smith@mail.com" wyświetlanej jako "email to the author" 
+<footer><p>Author: John Smith<br><a href="mailto:j.smith@mail.com">email to the author</a></p></footer>
+podaj link do strony "https://nowa-strona.eu" o nazwie "Nowa strona" bez podkreślenia tekstu 
+<a href="https://nowa-strona.eu" style="text-decoration:none;">Nowa strona</a>
+użyj w sekcji head odnośnika do pliku ze stylami "styles.css" 
+<head><link rel="stylesheet" href="styles.css"></head>
+stwórz klasę newclass zawierającą kolor czcionki ciemnoniebieski 
+<style>.newclass{color:darkblue;}</style>
+zastosuj w nagłówku o rozmiarze 1 stworzoną wcześniej klasę newclass; nagłówek ma zawierać treść "Nowa klasa" 
+<h1 class="newclass">Nowa klasa</h1>
+zastosuj w paragrafie dwie stworzone wcześniej klasy: klasa1 i klasa2; paragraf ma zawierać treść: "więcej niż jedna klasa" 
+<p class="klasa1 klasa2">więcej niż jedna klasa</p>
+zastosuj w paragrafie id o nazwie "mytext"; paragraf ma zawierać treść "some text" 
+<p id="mytext">some text</p>
+stwórz id o nazwie "special" z kolorem czcionki maroon 
+<style>#special{color:maroon;}</style>
+stwórz ramkę iframe z adresem "domyslny.html" 
+<iframe src="domyslny.html"></iframe>
+aktywuj skrypt "scrpt", który wpisuje tekst "Hello!" 
+<script>document.getElementById("scrpt").innerHTML="Hello!";</scrpt>
+umieść paragraf, do którego odniesie się aktywowany później skrypt o nazwie "scrpt" i umieści w nim tekst 
+<p id="scrpt"></p>
+w paragrafie napisz treść "proste działanie: ", następnie umieść "x" jako wartość var, a na końcu napisz dalszą treść "=3+4" 
+<p>proste działanie: <var>x</var>=3+4</p>
+umieść w paragrafie treść "fragment kodu: ", a następnie dopisz w nim kod "var osoba" 
+<p>fragment kodu: <code>var osoba</code></p>
+zapisz niezbędną zawartośc pustego szablonu strony 
+<!DOCTYPE html><html><body></body></html>

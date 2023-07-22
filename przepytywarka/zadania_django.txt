@@ -1,0 +1,178 @@
+stwórz w konsoli nowy projekt "projekt_1" 
+django-admin startproject projekt_1
+w konsoli uruchom stronę 
+python manage.py runserver
+stwórz w konsoli aplikację "App_one" 
+python manage.py startapp App_one
+w konsoli dokonaj migracji w aplikacji "App_one" 
+python manage.py makemigrations App_one
+stwórz lub edytuj w konsoli tabelę bazy danych 
+python manage.py migrate
+otwórz w konsoli powłokę 
+python manage.py shell
+w konsoli, przy użyciu powłoki, zaimportuj modele "Element" z aplikacji "App_one" 
+from App_one.models import Element
+w konsoli, przy użyciu powłoki, nadaj wartość a elementowi z tabeli bazy danych "Element" o indeksie 2 
+a=Element.objects.all()[2]
+w konsoli, przy użyciu powłoki, wyświetl wartość "color" elementu z tabeli bazy danych "Element" zawartego w zmiennej a 
+a.color
+w konsoli, przy użyciu powłoki, edytuj wartość "size" elementu z tabeli bazy danych "Element" zawartego w zmiennej s, tak żeby zmieniła wartość na "large" 
+s.size="large"
+przy użyciu powłoki w konsoli zapisz dodane elementy, których nazwy zostały zawarte w liście a_list=[item1,item2,item3] i przetworzone przy użyciu "for x in a_list" 
+x.save()
+dodaj w konsoli (w powłoce) do tabeli bazy danych "Element" element "item1", który zawiera wartości "color": "red" i "size": "medium" 
+item1=Element(color="red",size="medium")
+wyświetl w konsoli, przy użyciu powłoki, wszystkie wartości tabeli bazy danych "Element" 
+Element.objects.all().values()
+w konsoli (w powłoce) wyświetl tabelę bazy danych "Element" bez podawania zawartych w niej wartości 
+Element.objects.all()
+dodaj w pliku models.py (w folderze stworzonej aplikacji w projekcie) pole "number" typu int jako zmienną zawartą w klasie "Element" określającej tabelę bazy danych, zezwalając na wartości null 
+number=models.IntegerField(null=True)
+w pliku "urls.py" w folderze aplikacji "App_one" importuj "path" 
+from django.urls import path
+w pliku "urls.py" w folderze aplikacji "App_one" importuj "views" 
+from . import views
+w pliku "urls.py" w folderze aplikacji "App_one" dopisz "urlpatterns" wraz z niezbędną zawartością (odnoszącą się tylko do samej aplikacji) 
+urlpatterns=[path("App_one/",views.App_one,name="App_one"),]
+w pliku "urls.py" w folderze "projekt_1" (nie w folderze aplikacji) dopisz do listy zawartej w "urlpatterns" ścieżkę "include"; powiązana aplikacja to "App_one" 
+path("",include("App_one.urls"))
+w pliku "urls.py" w folderze "projekt_1" (nie w folderze aplikacji) napisz cały wiersz, który importuje elementy modułu "django.urls" 
+from django.urls import include,path
+w pliku "views.py" w folderze aplikacji "App_one" importuj HttpResponse 
+from django.http import HttpResponse
+w pliku "views.py" w folderze aplikacji "App_one" importuj loader 
+from django.template import loader
+w pliku "views.py" w folderze aplikacji "App_one" importuj model "Element" 
+from .models import Element
+w pliku "views.py" w folderze aplikacji "App_one" stwórz funkcję "App_one" (z parametrem "request"); uwzględnij zmienną "moje_elementy", tabelę "Element" oraz plik "rzeczy.html" z folderu "templates" aplikacji; napisz w jednej linijce (uwaga! wiersz z return tak naprawdę musi być napisany w nowym wierszu!) 
+def App_one(request):moje_elementy=Element.objects.all().values();template=loader.get_template("rzeczy.html");context={"moje_elementy":moje_elementy,};return HttpResponse(template.render(context,request))
+w pliku "settings.py" w folderze "projekt_1" dopisz do listy aplikację "App_one"; napisz w jednym wierszu, pisząc "(...)" zamiast fragmentu z zawartymi wcześniej elementami listy 
+INSTALLED_APPS=[(...)"App_one"]
+stwórz tabelę bazy danych "Element" poprzez dodanie klasy o tej samej nazwie w pliku "models.py" w folderze aplikacji; tabela ma zawierać pola tekstowe "color" i "size" (maksymalna długość - 255); zapisz w jednym wierszu 
+class Element(models.Model):color=models.CharField(max_length=255);size=models.CharField(max_length=255)
+w pliku "rzeczy.html" w folderze templates aplikacji dopisz kod, który pozwoli na wyświetlenie na stronie elementów tabeli bazy danych zawartych w zmiennej "moje_elementy"; elementy (zawierające "color" i "size" oddzielone spacją) mają być wyświetlone na nieuporządkowanej liście; zastosować "for a" 
+<ul>{%for a in moje_elementy%}<li>{{a.color}} {{a.size}}</li>{%endfor%}</ul>
+w pliku "detale.html" w folderze "templates" aplikacji "App_one" napisz paragraf, który wyświetli rubrykę "numer" elementu reprezentowanego przez zmienną "moj_el" z poprzedzającym go tekstem "Numer: " 
+<p>Numer: {{moj_el.numer}}</p>
+w pliku "detale.html" w folderze "templates" aplikacji "App_one" napisz paragraf, który wyświetli odnośnik do nadrzędnej strony, wyświetlającej elementy bazy danych "Element"; tekst "Powrót do " ma poprzedzać odnośnik wyświetlany jako słowo "listy" 
+<p>Powrót do <a href="/Element">listy</a></p>
+w pliku "rzeczy.html" w folderze "templates" aplikacji "App_one" stwórz nieuporządkowaną listę odnośników do strony "detale" wyświetlanych jako poszczególne elementy tabeli bazy danych "Element" (rubryki "color" i "size" oddzielone spacją); poszczególne elementy mają być odczytane przy pomocy pętli "for a" odnoszącej się do zmiennej "moje_elementy" 
+<ul>{%for a in moje_elementy%}<li><a href="detale/{{a.id}}">{{a.color}} {{a.size}}</a></li>{%endfor%}</ul>
+stwórz w pliku "views.py" w folderze aplikacji "App_one" funkcję "detale" (z parametrami "request" i "id") zawierającą zmienne: "moje_elementy" odnoszący się do tabeli bazy danych Element, "template" odnoszący się do pliku "detale.html" oraz "context"; zapisać w jednej linijce, pamiętając, że w rzeczywistości wiersz z "return" musi tak naprawdę być napisany osobno 
+def detale(request,id):moje_elementy=Element.objects.get(id=id);template=loader.get_template("detale.html");context={"moje_elementy":moje_elementy};return HttpResponse(template.render(context,request))
+do listy "urlpatterns" w pliku urls.py w folderze aplikacji "App_one" dopisz ścieżkę odnoszącą się do strony "detale" ukazującej szczegóły poszczególnych elementów tabeli bazy danych "Element" 
+path("App_one/detale/<int:id>",views.detale,name="detale")
+w utworzonym pliku "mstr.html" w folderze "templates" aplikacji napisz wiersz, w którym pomiędzy elementami <head> i <title> znajdzie się kod wyświetlający treść (tytuł) z innych szablonów projektu 
+<head><title>{%block title%}{%endblock%}</title></head>
+w plikach "rzeczy.html" oraz "detale.html" dodaj kod z tytułem "Lista rzeczy", który wykorzysta szablon "mstr.html" do wyświetlenia tego tytułu 
+{%block title%}Lista rzeczy{%endblock%}
+w plikach "rzeczy.html" oraz "detale.html" umieść istniejącą już zawartość strony w bloku, aby można było wykorzystać szablon "mstr.html" do wyświetlenia zawartych w tym bloku treści; istniejącą część zastąp symbolem "(...)" 
+{%block content%}(...){%endblock%}
+w plikach "rzeczy.html" oraz "detale.html" napisz wiersz z tagiem "extends", który pozwoli odnieść się do pliku "mstr.html" 
+{%extends "mstr.html"%}
+w pliku "views.py" w folderze aplikacji stwórz funkcję main odnoszącą się do "main.html", strony głównej projektu, która wyprowadza html renderowany przez szablon; zapisz w jednej linijce (linijka z "return" tak naprawdę musi być zapisana w nowym wierszu) 
+def main(request):template=loader.get_template("main.html");return HttpResponse(template.render())
+w pliku "urls.py" w folderze aplikacji umieść w liście "urlpatterns" ścieżkę odnoszącą się do widoku "main" – głównego widoku 
+path("",views.main,name="main")
+w pliku "rzeczy.html" w folderze "templates" aplikacji "App_one" dodaj link do strony głównej, zapisując go w paragrafie, i zatytułuj ją "Home" 
+<p><a href="/">Home</a></p>
+w pliku "settings.py" w folderze projektu zezwól na przekierowywanie do szablonu 404 poprzez zmianę wartości "DEBUG" (zapisz cały wiersz) 
+DEBUG=False
+w pliku "settings.py" w folderze projektu zezwól na korzystanie z jakiejkolwiek domeny host; zapisz cały edytowany wiersz 
+ALLOWED_HOSTS=["*"]
+w pliku "404.html" w folderze "templates" aplikacji umieść nagłówek o rozmiarze 1 z treścią "Error!" 
+<h1>Error!</h1>
+w pliku "views.py" folderu aplikacji dodaj funkcję "tstng" z parametrem "request", która odniesie się do pliku "test.html", strony testowej w folderze "templates" i zawierającej kontekst - listę "drinks" zawierającą: "tea", "coffee", "juice"; zapisz w jednej linijce (normalnie "return" musi być i tak w nowym wierszu) 
+def tstng(request):template=loader.get_template("test.html");context={"drinks":["tea","coffee","juice"];return HttpResponse(template.render(context,request))
+w pliku "urls.py" w folderze aplikacji dodaj do zbioru "urlpatterns" ścieżkę dla strony testowej, odnosząc się do funkcji "tstng" z pliku "views.py" 
+path("tstng/",views.tstng,name="tstng")
+w pliku "test.html" w folderze "templates" aplikacji dodaj pętlę "for a" odpowiedzialną za wyświetlenie elementów zbioru "drinks"; elementy listy mają się wyświetlić w paragrafach 
+{%for a in drinks%}<p>{{a}}</p>{%endfor%}
+w pliku "urls.py" w folderze projektu (nie aplikacji) dodaj ścieżkę "admin" do zbioru "urlpatterns" 
+path("admin/",admin.site.urls)
+w konsoli stwórz konto administratora 
+python manage.py createsuperuser
+w pliku "admin.py" w folderze aplikacji zezwól na wyświetlenie zawartości tabeli bazy danych "Element" w interfejsie administratora 
+admin.site.register(Element)
+w pliku "admin.py" w folderze aplikacji importuj model "Element" 
+from .models import Element
+w pliku "models.py" w folderze aplikacji zdefiniuj funkcję "__str__()", aby wyświetlać nazwy elementów bazy danych (rubryki "color" i "size" oddzielone spacją); zapisz w jednej linijce (pamiętając, że "return" tak naprawdę musi być zapisany w nowym wierszu oraz że funkcja należy do klasy); jest to jedna z dwóch metod 
+def __str__(self):return f"{self.color} {self.size}"
+w pliku "admin.py" w folderze aplikacji stwórz klasę "ElmAdm", która umożliwi wyświetlenie elementów listy bazy danych w interfejsie administratora w postaci rubryk "color" i "size"; zapisz w jednej linijce; jest to jedna z dwóch metod 
+class ElmAdm(admin.ModelAdmin):list_display=("color","size")
+w pliku "admin.py" w folderze aplikacji zaktualizuj odpowiedni wiersz, aby wykorzystać funkcję "ElmAdm" do zmiany wyświetlania elementów listy bazy danych "Element" w interfejsie administatora 
+admin.site.register(Element,ElmAdm)
+w pliku "test.html" w folderze "templates" aplikacji napisz nagłówek o rozmiarze 2 wyświetlający treść: "Hello (...)!", gdzie w miejscu wielokropka ma być zawartość zmiennej "name" 
+<h2>Hello {{name}}!</h2>
+w pliku "views.py" w folderze aplikacji, w funkcji "tstng" stwórz zmienną "name" zawierającą imię "Mike", które będzie mogło wyświetlić się na stronie zawartej w tej funkcji; napisz cały wiersz zawierający zmienną "name" 
+context={"name":"Mike",}
+w pliku "test.html" w folderze "templates" aplikacji stwórz bezpośrednio zmienną "name2" zawierającą imię "Mark" i napisz nagłówek o rozmiarze 2 z tekstem: "Good morning (...)", gdzie w miejscu wielokropka ma być wyświetlana zawartość utworzonej zmiennej; zapisz w jednym wierszu 
+{%with name2="Mark"%}<h2>Good morning {{name2}}</h2>{%endwith%}
+w pliku "test.html" w folderze "templates" aplikacji napisz warunek, że jeśli wartość zmiennej "informacja" jest równa 1, wyświetli się paragraf z tekstem "prawda", a jeśli nie, wyświetl paragraf z tekstem "nieprawda"; zapisz w jednym wierszu 
+{%if informacja==1%}<p>prawda</p>{%else%}<p>nieprawda</p>{%endif%}
+w pliku "test.html" w folderze "templates" aplikacji napisz warunek, że jeśli wartość zmiennej "informacja" jest równa 1 lub równa 2, wyświetli się nagłówek o rozmiarze 1 z tekstem "prawda", a jeśli wartość "informacja" jest większa niż 0 i mniejsza niż 1, wyświetli się nagłówek o rozmiarze 1 z tekstem "ziarno prawdy" 
+{%if informacja==1 or informacja==2%}<h1>prawda</h1>{%elif informacja>0 and informacja<1%}<h1>ziarno prawdy</h1>{%endif%}
+w pliku "test.html" w folderze "templates" aplikacji napisz warunek, że jeżeli imię "James" nie należy do zmiennej "names", wyświetli się paragraf z tekstem "no", a w innym wypadku wyświetli się paragraf z treścią "yes" 
+{%if "James" not in names%}<p>no</p>{%else%}<p>yes</p>{%endif%}
+w pliku "test.html" w folderze "templates" aplikacji stwórz warunek, że jeśli zawartość zmiennej "x" jest taka sama jak zmiennej "y", wyświetli się paragraf z treścią "same", a w innym wypadku wyświetli się paragraf z treścią "different" 
+{%if x is y%}<p>same</p>{%else%}<p>different</p>{%endif%}
+utwórz bezpośrednio w pliku "test.html" zmienne "var_1" i "var_2" i nadaj im wartości odpowiednio True i False, a następnie stwórz warunek, że jeśli wartości obu zmiennych są takie same, wyświetli się nagłówek h1 o treści "ok", a w innym wypadku wyświetli się nagłówek h1 z treścią "no" 
+{%with var_1=True var_2=False%}{%if var_1 is var_2%}<h1>ok</h1>{%else%}<h1>no</h1>{%endif%}{%endwith%}
+w pliku "test.html" stwórz pętlę "for s", która przeprocesuje elementy tabeli bazy danych "Element" i wyświetli w nagłówkach h1 ich numery kolejności, a w paragrafach rubryki "color" i "size" oddzielone przecinkiem i spacją 
+{%for s in Element%}<h1>{{s.id}}</h1><p>{{s.color}}, {{s.size}}</p>{%endfor%}
+w pliku "test.html" stwórz pętlę "for r", która przeprocesuje elementy tabeli bazy danych "Element" i wyświetli w odwróconej kolejności w nagłówkach h2 ich numery indeksów wraz z kropką i spacją, a w paragrafach rubryki "color" i "size" oddzielone przecinkiem i spacją 
+{%for r in Element reversed%}<h2>{{r.id}}</h2><p>{{r.color}}, {{r.size}}</p>{%endfor%}
+w pliku "test.html" stwórz pętlę "for t", która przeprocesuje elementy listy "testlist", która jest pusta, i wyświetli w paragrafie treść "nothing" zamiast elementów "item" 
+{%for t in testlist%}<p>{{t.item}}</p>{%empty%}<p>nothing</p>{%endfor%}
+w pliku "test.html" stwórz wewnątrz nieuporządkowanej listy html pętlę "for t", która przeprocesuje elementy listy "testlist"; w przypadku, gdy nie istnieje, zamiast listy z wartościami "name" elementów "testlist", wyświetlić ma się wiersz listy z treścią "no such object" 
+<ul>{%for t in testlist%}<li>{{t.name}}</li>{%empty%}<li>no such object</li>{%endfor%}</ul>
+w pliku "test.html" stwórz wewnątrz nieuporządkowanej listy html pętlę "for r", która przeprocesuje elementy listy "fruits", i za pomocą forloop wyświetli numery elementów listy w odwróconej kolejności, licząc do zera 
+<ul>{%for r in fruits%}<li>{{forloop.revcounter0}}</li>{%endfor%}</ul>
+w pliku "test.html" stwórz wewnątrz nieuporządkowanej listy html pętlę "for c", która przeprocesuje elementy listy "fruits", i za pomocą forloop wyświetli kolejno numery elementów listy, licząc od numeru 1 
+<ul>{%for c in fruits%}<li>{{forloop.counter}}</li>{%endfor%}</ul>
+w pliku "test.html" stwórz wewnątrz nieuporządkowanej listy html pętlę "for a", która przeprocesuje elementy listy "fruits", i za pomocą forloop wyświetli kolejno jej elementy, a dodatkowo doda tło dla ostatniego elementu w kolorze powderblue 
+<ul>{%for a in fruits%}<li {%if forloop.last%}style="background-color:powderblue;"{%endif%}>{{a}}</li>{%endfor%}</ul>
+w pliku "rzeczy.html" stwórz wewnątrz nieuporządkowanej listy html pętlę "for a", która przeprocesuje elementy zawarte w "moje_elementy", i za pomocą forloop wyświetli kolejno rubryki "color" jej elementów, a dodatkowo zmieni kolor pierwszego elementu na złoty 
+<ul>{%for a in moje_elementy%}<li {%if forloop.first%}style="color:gold;"{%endif%}>{{a.color}}</li>{%endfor%}</ul>
+napisz komentarz o treści "komentarz %" umieszczonej w paragrafie, wykorzystując znak % 
+{%comment%}<p>komentarz %</p>{%endcomment%}
+napisz komentarz z opisem "opis" o treści "kolejny komentarz %" umieszczonej w nagłówku h3, wykorzystując znak % 
+{%comment "opis"%}<h3>kolejny komentarz %</h3>{%endcomment%}
+napisz komentarz "nowy komentarz", wykorzystując znak # 
+#nowy komentarz
+umieśc na stronie "rzeczy.html" zawartość strony "footer.html" 
+{%include "footer.html"%}
+umieść na stronie "rzeczy.html" zawartość strony "header.html" zawierającej zmienne "name" i "company", nadając im wartości odpowiednio "Nate" i "ABC Company" 
+{%include "header.html" with name="Nate" company="ABC Company"%}
+w pliku "header.html" utwórz sekcję div zawierającą treść "imię: (...), firma: (...)", gdzie zamiast "(...)" mają być zmienne odpowiednio "name" i "company" (ich wartości będą nadane w innym szablonie) 
+<div>imię: {{name}}, firma: {{company}}</div>
+w pliku "views.py" w folderze aplikacji stwórz funkcję "test_1", uwzględniając zmienną "moje_dane" określającą wyświetlanie rubryk, tabelę "Element" oraz plik "rzeczy.html"; wyświetlane mają być tylko wartości "color"; w zmiennej "context" ma być też zawarta nazwa "moje_elementy";napisz w jednej linijce (wiersz z return tak naprawdę musi być w nowym wierszu!) 
+def test_1(request):moje_dane:Element.objects.values_list("color");template=loader.get_template("template.html");context={"moje_elementy":"moje_dane"};return HttpResponse(template.render(context,request))
+w funkcji "test_1" zaktualizuj zmienną "moje_dane" określającą wyświetlanie rubryk tabeli "Element", aby zwracane były tylko elementy, których wartość "color" to "red" 
+moje_dane=Element.objects.filter(color="red").values()
+napisz, jak w SQL filtrowałoby się elementy tabeli "Element", tak aby zwrócone były jedynie te, których wartość "size" to "large"
+SELECT * FROM Element WHERE size="large";
+zaktualizuj wiersz ze zmienną "moje_dane" w funkcji "test_1" w pliku "views.py" w folderze aplikacji, aby zwrócone były tylko elementy tabeli "Element", których wartość "color" to "grey", a wartość "size" to "medium" 
+moje_dane=Element.objects.filter(color="grey",size="medium").values()
+zaktualizuj wiersz ze zmienną "moje_dane" w funkcji "test_1" w pliku "views.py" w folderze aplikacji, aby zwrócone były tylko elementy tabeli "Element", których wartość "color" to "black" lub "white"; użyj metody bez "Q" 
+moje_dane=Element.objects.filter(color="black").values()|Element.objects.filter(color="white").values()
+w pliku "views.py" w folderze aplikacji importuj "Q" 
+from django.db.models import Q
+stosując metodę z "Q", zaktualizuj wiersz ze zmienną "moje_dane" w funkcji "test_1" w pliku "views.py" w folderze aplikacji, aby zwrócone były tylko elementy tabeli "Element", których wartość "size" to "small" lub "large" 
+moje_dane=Element.objects.filter(Q(size="small")|Q(size="large")).values()
+napisz, jak w SQL filtrowałoby się elementy tabeli "Element", tak aby zwrócone były jedynie te, których wartość "color" to "red" lub "green"
+SELECT * FROM Element WHERE color="red" OR color="green";
+zaktualizuj wiersz ze zmienną "moje_dane" w funkcji "test_1" w pliku "views.py" w folderze aplikacji, aby zwrócone były tylko elementy tabeli "Element", których wartość "color" zaczyna się na literę "b" 
+moje_dane=Element.objects.filter(color__startswith="b").values()
+zaktualizuj wiersz ze zmienną "moje_dane" w funkcji "test_1" w pliku "views.py" w folderze aplikacji, aby zwrócone elementy tabeli "Element" były wyświetlone w kolejności alfabetycznej względem wartość "color" 
+moje_dane=Elemen.objects.all().order_by("color").values()
+napisz, jak w SQL określiłoby się wyświetlanie elementów tabeli "Element" w kolejności alfabetycznej względem wartość "color"
+SELECT * FROM Element ORDER BY color;
+zaktualizuj wiersz ze zmienną "moje_dane" w funkcji "test_1" w pliku "views.py" w folderze aplikacji, aby zwrócone elementy tabeli "Element" były wyświetlone w kolejności alfabetycznej względem wartość "size", ale odwróconej 
+moje_dane=Element.objects.all().order_by("-size").values()
+napisz, jak w SQL określiłoby się wyświetlanie elementów tabeli "Element" w kolejności alfabetycznej odwróconej względem wartość "size" 
+SELECT * FROM Element ORDER BY size DESC;
+zaktualizuj wiersz ze zmienną "moje_dane" w funkcji "test_1" w pliku "views.py" w folderze aplikacji, aby zwrócone elementy tabeli "Element" były wyświetlone w kolejności alfabetycznej względem wartość "color", a także względem wartości "id", ale odwróconej 
+moje_dane=Element.objects.all().order_by("color","-id").values()
+napisz, jak w SQL określiłoby się wyświetlanie elementów tabeli "Element" w kolejności alfabetycznej względem wartość "color", a także względem wartości "id", ale odwróconej
+SELECT * FROM Element ORDER BY color ASC,id DESC;

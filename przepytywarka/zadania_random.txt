@@ -1,0 +1,35 @@
+wyznacz ziarno generatora losowego o wartości 1024 
+random.seed(1024)
+przechwyć stan generatora losowego umożliwiający późniejsze powtórzenie wyniku losowania, wyznacz dla niego zmienną st 
+st=random.getstate()
+użyj przechwycony stan generatora losowego zawarty w zmiennej st, aby powtórzyć wynik losowania 
+random.setstate(st)
+wygeneruj losową liczbę, której wartość mieści się w 4 bitach, wyświetl wynik 
+print(random.getrandbits(4))
+wyświetl liczbę losową z przedziału od 3 do 12 (wyłączając 12) 
+print(random.randrange(3,12))
+wyznacz zmienną Ra z wylosowaną liczbą od 0 do 5 (wyłączając 5) 
+Ra=random.randrange(5)
+wyświetl losową liczbę parzystą z przedziału od 4 do 11 (wyłączając 11) 
+print(random.randrange(4,11,2))
+wyznacz zmienną Ri z liczbą wylosowaną z przedziału od 5 do 20 
+Ri=random.randint(5,20)
+wyświetl liczbę losową z przedziału od 0 do 7 
+print(random.randint(0,7))
+wyświetl losowy element z listy Lst2 
+print(random.choice(Lst2))
+wyświetl losową literę wyrazu "Computer" 
+print(random.choice("Computer"))
+wyświetl pięcioelementową listę składającą się z wylosowanych elementów trzyelementowej listy A, gdzie prawdopodobieństwo ich wylosowania wynosi odpowiednio 1, 2 i 5 
+print(random.choices(A,weights=[1,2,5],k=5))
+wyznacz listę B dwuelementową składającą się z wylosowanych elementów listy V 
+B=random.choices(V,k=2)
+wymieszaj elementy listy my_list 
+random.shuffle(my_list)
+wyznacz zmienną R z losową liczbą zmiennoprzecinkową z zakresu od 0.0 do 1.0 
+R=random.random()
+wyświetl losową liczbę zmiennoprzecinkową z przedziału od 10 do 100 
+print(random.uniform(10,100))
+wyświetl losową liczbę zmiennoprzecinkową z przedziału od 20 do 50, gdzie "środek" pomiędzy liczbą minimalną a maksymalną wynosi 25 
+print(random.triangular(20,50,25))
+

@@ -1,0 +1,310 @@
+stwórz zmienną typu var o nazwie "osoby" i dodaj do niej wartość "Marcin" 
+var osoby="Marcin";
+stwórz zmienną "liczba" typu var i nadaj jej wartość 99 
+var liczba=99;
+stwórz zmienne a i s typu var, nadaj im wartości odpowiednio 4 i 8, a następnie spraw, aby w elemencie z id o nazwie "nowe_id" wyświetliła się suma obu zmiennych; zapisz w jednym wierszu 
+var a=4;var s=8;document.getElementById("nowe_id").innerHTML=a+s;
+wyświet alert z wartością zmiennej z: 
+alert(z);
+stwórz zmienne s i d typu let i nadaj im wartości odpowiednio 1 i 2, a także zmienną f typu var, która jest sumą zmiennych s i d, a następnie wyświetl alert z wartością zmiennej f; zapisz w jednym wierszu 
+let s=1;let d=2;var f=s+d;alert(f);
+stosując pojedynczy zapis "var", stwórz zmienne fName i lName i nadaj im wartości typu string, odpowiednio "James" i "Johnson", a także wartość typu integer bYear - 1987 
+var fName="James",lName="Johnson",bYear=1987;
+wyświetl alert o wyniku mnożenia liczb 2 i 5 
+alert(2*5);
+wyświetl alert o wyniku dzielenia liczb 8 i 4 
+alert(8/4);
+wyświetl alert przedstawiający resztę dzielenia liczb 16 i 9 
+alert(16%9);
+powiększ wartość zmiennej d o wartość zmiennej f skróconym sposobem 
+d+=f;
+pomnóż wartość zmiennej e przez wartość zmiennej d skróconym sposobem 
+e*=d;
+napisz komentarz o treści "nowy komentarz" 
+//nowy komentarz
+stwórz funkcję nowaFunkcja, która wyświetli alert "dzień dobry"; napisz w jednym wersie
+function nowaFunkcja(){alert("dzień dobry");}
+wywołaj funkcję nowaFunkcja 
+nowaFunkcja();
+stwórz funkcję stara_funkcja, która zwróci treść "cześć"; napisz w jednym wersie
+function stara_funkcja(){return "cześć";}
+stwórz funkcję o nazwie Funkcja_02, która sprawi, że treść zmiennej S wyświetli się w elemencie z id o nazwie "demo"; zapisz w jednym wierszu 
+function Funkcja_02(){document.getElementById("demo").innerHTML=S;}
+stwórz objekt typu const o nazwie "osoba", który zawiera zmienne "name" oraz "country" z przypisanymi odpowiednio wartościami: "Mark" i "USA", a także wyświetl alert z treścią wartości przypisanej do zmiennej "country" w tym obiekcie; zapisz w jednym wierszu
+const osoba={name:"Mark",country:"USA"};alert(osoba.country);
+stwórz obiekt typu let o nazwie "member", który zawiera zmienne "sName" i "age" z przypisanymi odpowiednio wartościami: "Smith" i "44", a także wyświetl alert z wartością skojarzoną ze zmienną "age" w tym obiekcie; zapisz w jednym wierszu 
+let member={sName:"Smith",age:44};alert(member.age);
+wyświetl alert, który przedstawi zmienną "name" obiektu "member", tekst " is from " oraz zmienną "city" obiektu "location" 
+alert(member.name+" is from "+location.city);
+stwórz przycisk o nazwie "kliknij mnie", który po kliknięciu wyświetli alert "Hej!" 
+<button onclick="alert('Hej!')">kliknij mnie</button>
+stwórz przycisk o nazwje "nie klikaj!", który po kliknięciu wykona funkcję funkcja25 
+<button onclick="funkcja25()">nie klikaj!</button>
+spraw, aby element div po najechaniu kursorem zmienił styl: tło ma być w kolorze srebrnym; treść sekcji div: "nowa sekcja" 
+<div onmouseover="this.style.backgroundColor='silver'">nowa sekcja</div>
+stwórz zmienną l typu let, która będzie zawierała długość zmiennej txt typu string, a następnie wyświetl alert przedstawiający wartość zmiennej l; zapisz w jednym wierszu 
+let l=txt.length;alert(l);
+stwórz zmienną txt typu led, która zawiera treść "Film pod tytułem "Volver"", tak aby poprawnie wyświetlił się cudzysłów 
+let txt="Film pod tytułem \"Volver\"";
+wyświetl alert, który przedstawi zmienne zm1 i zm2 razem 
+alert(zm1+zm2);
+stwórz zmienną tekst typu var, która zawiera treść "dziś jest piątek", a następnie zamień wszystkie litery na wielkie; zapisz w jednym wierszu 
+var tekst="dziś jest piątek";tekst=tekst.toUpperCase();
+stwórz zmienną tekst typu let zawierającą treść "Dzień dobry", a następnie stwórz zmienną txt typu let, która zawiera tylko treść "dobry", wykorzystując metodę slice; zapisz w jednym wierszu 
+let tekst="Dzień dobry";let txt=tekst.slice(6,11);
+stwórz zmienną powitanie typu var o treści "Cześć Piotrek!", a następnie zamień imię "Piotrek" na "Marcin"; zapisz w jednym wierszu 
+var powitanie="Cześć Piotrek!";powitanie=powitanie.replace("Piotrek","Marcin");
+spraw, aby wszystkie litery zawarte w zmiennej tx typu string miały małe litery 
+tx=tx.toLowerCase();
+stwórz listę const "members" zawierającą imiona: "Marcin", "Janusz", "Piotrek"; stwórz zmienną const "person" ze zmienną "Janusz", stosując numer indeksu; zapisz w jednym wierszu 
+const members=["Marcin","Janusz","Piotrek"];const person=members[1];
+nadpisz członka listy members o numerze indeksu 0, nadając imię "Andrzej" 
+members[0]="Andrzej";
+wyświetl alert z liczbą elementów listy members 
+alert(members.length);
+stwórz listę owoce, stosując zmienną typu const, przypisz jej elementy "jabłko", "agrest" i "śliwka", a następnie wytnij ostatni element tej listy; zapisz w jednym wierszu 
+const owoce=["jabłko","agrest","śliwka"];owoce.pop();
+do listy owoce dodaj na końcu element "gruszka" 
+owoce.push("gruszka");
+używając metody splice, usuń z listy sześcioelementowej o nazwie "warzywa" trzy elementy, zaczynając od numeru 2 indeksu
+warzywa.splice(2,3);
+używając metody splice, usuń z listy pięcioelementowej o nazwie "rzeczy" dwa elementy, zaczynając od numeru 1 indeksu, i wstaw w ich miejsce element "skakanka" 
+rzeczy.splice(1,2,"skakanka");
+używając metody slice, usuń dwa pierwsze elementy listy "rzeczy" 
+rzeczy.slice(2);
+spłaszcz elementy listy "narzędzia", aby pozbawić jej wewnętrznych, podrzędnych list 
+narzędzia.flat();
+spłaszcz elementy listy "lista_2d", aby pozbawić jej wewnętrznych, podrzędnych list; przypisz ją do zmiennej typu const o nazwie "lista_1"; zapisz w jednym wierszu 
+const lista_1=lista_2d.flat();
+połącz listę "A_list" i "B_list" w jedną całość, przypisując ją do zmiennej typu const o nazwie "Full_list" 
+const Full_list=A_list.concat(B_list);
+usuń z listy fruits element o indeksie 1, zostawiając niezdefiniowany slot 
+delete fruits[1];
+stosując zmienną "tools" typu const, stwórz listę składającą się z elementów "hammer", "screwdriver" i "tape", a następnie zastąp element o indeksie 2 elementem "knife"; zapisz w jednym wierszu 
+const tools=["hammer","screwdriver","tape"];tools[2]="knife";
+stosując metodę nie wymagającą podawania numeru indeksu, usuń z listy tools pierwszy element tak, aby numery indeksu pozostałych przesunęły się, nie pozostawiając luki 
+tools.shift();
+dodaj na początku listy vegetables elementy "Tomato" i "Potato" tak, aby numery indeksów pozostałych elementów przesunęły się, zachowując ciągłość; zastosuj metodę nie wymagającą podania indeksu 
+vegetables.unshift("Tomato","Potato");
+ułóż elementy listy owoce w kolejności alfabetycznej 
+owoce.sort();
+stwórz zmienną d typu let i przypisz jej aktualną datę i czas; wyświetl alert przedstawiający zmienną d; zapisz w jednym wierszu
+let d=new Date();alert(d);
+stwórz zmienną d typu const i przypisz jej aktualną datę i czas, a następnie wyświetl aktualny rok w elemencie z id o nazwie "example"; zapisz w jednym wierszu 
+const d=new Date();document.getElementById("example").innerHTML=d.getFullYear();
+stwórz zmienną m typu const i przypisz jej aktualną datę i czas, a następnie wyświetl aktualny miesiąc w elemencie z id o nazwie "month";zapisz w jednym wierszu 
+const m=new Date();document.getElementById("month").innerHTML=m.getMonth();
+wyświetl rok 2021 w elemencie z id o nazwie("demo"); czas zawarty jest w zmiennej t 
+document.getElementById("demo").innerHTML=t.setFullYear(2021);
+stwórz zmienną r typu let i wykreuj losową liczbę 
+let r=Math.random();
+stwórz zmienną m typu let i przypisz jej liczbę maksymalną spośród liczb: 0, 1, 15, -20
+let m=Math.max(0,1,15,-20);
+stwórz zmienną ln typu let i przypisz jej logarytm naturalny z 3 
+let ln=Math.log(3);
+napisz skrypt, dzięki któremu wyświetlisz logarytm o podstawie 2, który przedstawi, ile razy trzeba pomnożyć 2, aby otrzymać 8; element wyświetlający tę informację ma mieć id o nazwie "elm"; zapisz w jednym wierszu 
+<script>document.getElementById("elm").innerHTML=Math.log2(8);</script>
+stwórz zmienną c typu var i przypisz jej liczbę 5.6 zaokrągloną w górę 
+var c=Math.ceil(5.6);
+stwórz zmienną Rnd typu let i przypisz jej liczbę -4.2 zaokrągloną do najbliższej liczby typu integer 
+let Rnd=Math.round(-4.2);
+stwórz zmienną typu Fl typu const i przypisz jej liczbę -15.9 zaokrągloną w dół 
+const Fl=Math.floor(-15.9);
+stwórz zmienną X typu let i przypisz jej liczbę 4 podniesioną do potęgi 3 przy zastosowaniu metody pow 
+let X=Math.pow(4,3);
+stwórz zmienną Y typu var i przypisz jej pierwiastek kwadratowy liczby 16 
+var Y=Math.sqrt(16);
+stwórz zmienną a typu let i przypisz jej wartość pozytywną liczby -25.5 
+let a=Math.abs(-25.5);
+stosując liczbę pi, zamień ten kąt 90 stopni na radiany; wynik przypisz zmiennej rad typu let
+let rad=90*Math.PI/180;
+stwórz zmienną sinus typu let, konwertując wartość kąta 90 stopni na radiany przy zastosowaniu liczby pi (odpowiednia metoda zwraca sinus z radianów, a nie kąta podanego w stopniach) 
+let sinus=Math.sin(90*Math.PI/180);
+stwórz zmienną z typu var i przypisz jej część liczby -5.2 przed kropką (-5) 
+var z=Math.trunc(-5.2);
+napisz skrypt, gdzie umieścisz zmienną x typu let o wartości -2 i w którym napiszesz kod, który przedstawi w elemencie z id o nazwie "demo", czy liczba x jest dodatnia, ujemna czy zerowa 
+<script>let x=-2;document.getElementById("demo").innerHTML=Math.sign.(x);</script>
+napisz alert, który przestawi, czy wartość x jest taka sama co wartość z 
+alert(x==z);
+napisz alert, który przedstawi, czy wartość a jest większa lub równa wartości s 
+alert(a>=s);
+napisz alert, który przedstawi, czy wartość q nie jest równa wartości e 
+alert(q!=e);
+stwórz zmienną wiek typu var i przypisz jej wartość x, a następnie stwórz zmienną var dorosły i przypisz jej warunek (z użyciem znaku "?"), że jeśli wartość zmiennej wiek jest mniejsza niż 18, zwróci się tekst "nieletni", a w przeciwnym wypadku zwróci się tekst "dorosły"; wyświetl alert ze zmienną dorosły; zapisz w jednym wierszu 
+var wiek=x;var dorosły=(wiek<18)?"nieletni":"dorosły";alert(dorosły);
+stwórz warunek, że jeśli Q jest mniejsze od E, wyświetli się alert "E przewyższa Q"
+if(Q<E){alert("E przewyższa Q");}
+stwórz warunek, że jeśli wartość zmiennej time jest mniejsza niż 18, wyświetli się alert "dzień dobry", a w przeciwnym wypadku wyświetli się alert "dobry wieczór" 
+if(time<18){alert("dzień dobry");}else{alert("dobry wieczór");}
+dodaj sekcję "rzeczy", w której jeżeli wystąpi element "szczotka", wyświetli się alert "pielęgnacja włosów", jeśli wystąpi element "ręcznik", wyświetli się alert "pora na prysznic", natomias domyślny alert to "relaks"; zapisz w jednym wierszu 
+switch(rzeczy){case "szczotka":alert("pielęgnacja włosów")break;case "ręcznik":alert("pora na prysznic")break;default:alert("relaks");}
+dodaj sekcję "warzywa", w której jeśli wystąpi element "pomidor", wyświetli się alert "zupa pomidorowa", a jeśli wystąpi element "ziemniak", wyświetli się alert "frytki belgijskie"; zapisz w jednym wierszu 
+switch(warzywa){case "pomidor":alert("zupa pomidorowa")break;case "ziemniak":alert("frytki belgijskie")break;}
+wykorzystując zmienną i typu let, stwórz warunek, że dla i mniejszego niż 7, zaczynając od 0, i będzie wzrastać o 1 (najkrótszy możliwy zapis), i za każdym razem do zmiennej txt typu string doda się wartość i oraz rozpoczęcie pisania od nowego wiersza; zapisz w jednym wierszu 
+for(let i=0;i<7;i++){txt+=i+"<br>";}
+napisz skrypt, w którym stworzysz pustą zmienną let "tekst" typu string, a następnie stworzysz warunek for, w którym zmienna let "x" początkowo równa 0 zwiększa się o 2, póki jej wartość jest mniejsza lub równa 10; za każdym razem do zmiennej "tekst" dodawana jest treść:"nr ", wartość zmiennej x oraz ", "; zmienna "tekst" ma się wyświetlić w drugim elemencie o klasie "nowaKlasa"; zapisz w jednym wierszu 
+<script>let tekst="";for(let x=0;x<=10;x+=2){tekst+="nr "+x+", ";}document.getElementsByClassName("nowaKlasa")[1].innerHTML=tekst;</script>
+napisz skrypt, w którym stworzysz zmienną "fruits" typu const, zawierającą listę z elementami: "Banana", "Cherry" i "Pear", a także pustą zmienną txt typu var, następnie stosując pętlę for i zmienną let x, dodaj do zmiennej txt kolejno każdy element listy "fruits" oraz rozpoczęcie pisania od nowego wiersza; ostatecznie wyświetl zmienną txt w pierwszym elemencie o klasie "demo"; zapisz w jednym wierszu 
+<script>const fruits=["Banana","Cherry","Pear"];var txt="";for(let x of fruits){txt+=x+"<br>";}document.getElementsByClassName("demo")[0].innerHTML=txt;</script>
+stwórz zmienną i typu let o wartości 0, a następnie stwórz pętlę while, która dopóki wartość i jest mniejsza niż 15, będzie zapisywać dane w konsoli wyszukiwarki (i), a także doda 1 do wartości zmiennej i najprostszym możliwym sposobem; zapisz w jednym wierszu 
+let i=0;while(i<15){console.log(i);i++;}
+napisz warunek (z użyciem for) ze zmienną "i" typu let o wartości 0; jeśli "i" jest mniejsze niż 12, to wartość "i" wzrasta za każdym razem o 2, ale gdy wartość oraz typ "i" będą równe 6, zakończy się przetwarzanie pętli; za każdym razem do zmiennej "text" dodawana jest wartość "i" oraz przecinek ze spacją; zapisz w jednym wierszu 
+for(let i=0;i<12;i+=2){if(i===6){break;}text+=i+", ";}
+napisz warunek, w którym stworzysz zmienną c typu var o wartości 0, i jeśli c jest mniejsze lub równe 5, to wartość i wzrasta za każdym razem o 1 ("c++"), ale gdy wartość oraz typ zmiennej c będą równe 4, to pominięta zostanie bieżąca sekwencja pętli; za każdym razem do zmiennej "text" dodawana jest wartość c oraz rozpoczęcie pisania od nowej linijki; zapisz w jednym wierszu 
+for(var c=0;c<=5;c++){if(c===4){continue;}text+=c+"<br>";}
+napisz skrypt, w którym wyświetli się treść "Cześć" w pierwszym paragrafie; zapisz w jednym wierszu 
+<script>document.getElementsByTagName("p")[0].innerHTML="Cześć";</script>
+napisz skrypt, który zamieni źródło obrazka z id o nazwie "a_pic" na "landscape.jpg"; zapisz w jednym wierszu 
+<script>document.getElementById("a_pic").src="landscape.jpg";</script>
+napisz skrypt, który zmieni wartość elementu input z id o nazwie "txt" na "nowa wartość"; zapisz w jednym wierszu 
+<script>document.getElementById("txt").value="nowa wartość";</script>
+zmień styl elementu z id o nazwie "example", tak aby kolor treści był niebieski 
+document.getElementById("example").style.color="blue";
+zmień styl elementu z id o nazwie "example", tak aby rozmiar czcionki wynosił 25 pikseli 
+document.getElementById("example").style.fontSize="25px";
+ukryj element z id o nazwie "hidden" 
+document.getElementById("hidden").style.display="none";
+napisz skrypt, w którym dodasz do przycisku z id "demo" zdarzenie, że w przypadku kliknięcia na ten element wykona się funkcja "nowaFunkcja" 
+<script>document.getElementById("demo").addEventListener("click",nowaFunkcja);</script>
+napisz skrypt, który wyświetli treść "hej" w okienku z alertem 
+<script>window.alert("hej");</script>
+stwórz przycisk, który nadpisze istniejący dokument HTML wynikiem dodawania liczb 10 i 5, kiedy kliknie się na ten przycisk 
+<button onclick="document.write(10+5)"></button>
+stwórz przycisk z treścią "drukuj", który otwórzy okno drukowania bieżącej strony 
+<button onclick="window.print()">drukuj</button>
+zadeklaruj naraz trzy zmienne typu let: a, b i c 
+let a,b,c;
+napisz komentarz o treści "uwaga" 
+//uwaga
+napisz komentarz o treści "wiele wierszy" przy zastosowaniu znaków umożliwiających napisanie go na kilku wierszach 
+/*wiele wierszy*/
+stwórz zmienną typu let o nazwie "$money$" i nadaj jej wartość 100 
+let $money$=100;
+stwórz zmienną typu var o nazwie "_name" i przypisz jej treść "Seth" 
+var _name="Seth";
+napisz skrypt, który stworzy zmienną x typu let o wartości 10, odejmie 1 od wartości x najprostszym możliwym sposobem, a następnie wyświetli wartość x w elemencie HTML o id "example"; zapisz w jednym wierszu
+<script>let x=10;x--;document.getElementById("example").innerHTML=x;</script>
+stwórz zmienną a typu let, przypisując jej wartość 4, a następnie podnieś do potęgi 3, stosując operator potęgowania 
+let a=4;a**=3;
+stwórz zmienną s typu var o wartości 80, a następnie trzykrotnie podziel przez 2, stosując odpowiedni operator 
+var s=80;s>>=3;
+stwórz zmienną x typu let o wartości -10, a następnie czterokrotnie pomnóż przez 2, stosując odpowiedni operator 
+let x=-10;x<<=4;
+stwórz zmienną y typu let o wartości 111222333444555666777888999000, pamiętając, że liczba ta jest zbyt duża, aby była traktowana standardowo 
+let y=BigInt("111222333444555666777888999000");
+stwórz funkcję "toC" z argumentem F, która zamieni stopnie Fahrenheita na stopnie Celsjusza (wzór: 5/9x(F-32); zapisz w jednym wierszu 
+function toC(F){return 5/9*(F-32);}
+wyświetl w elemencie HTML o id "example" zmienną "name" należącą do obiektu "person", stosując nawias kwadratowy 
+document.getElementById("example").innerHTML=person["name"];
+stwórz obiekt "player", stosując zmienną typu const, który zawiera elementy: "name", "nickname", "age" oraz przypisane do nich wartości odpowiednio "James", "DarkDragon" i 25, a także czwarty element "fullId", do którego przypisana jest funkcja zwracająca wartości "nickname", "age" oraz przecinek ze spacją pomiędzy nimi; zapisz w jednym wierszu 
+const player={name:"James",nickname:"DarkDragon",age:25,fullId:function(){return this.nickname+", "+this.age;}};
+napisz skrypt, dzięki któremu podczas używania rolki w myszce nad elementem HTML o id "my" wykona się funkcja "my_func" napisana następnie w tym samym skrypcie; funkcja "my_func" ustala rozmiar czcionki w bieżącym elemencie: 35 pikseli; zapisz w jednym wierszu 
+<script>document.getElementById("my").addEventListener("wheel",my_func);function my_func(){this.style.fontSize="35px";}</script>
+stwórz pole input typu text wraz ze zdarzeniem onkeydown, które w przypadku wciśnięcia klawisza w polu input wykona funkcję "nowaFunkcja", a także pusty paragraf o id "my", a następnie napisz skrypt, który definiuje funkcję "nowaFunkcja" wyświetlającą komunikat "a key is pressed" w stworzonym wcześniej paragrafie (ze względu na id); napisz w jednym wierszu 
+<input type="text" onkeydown="nowaFunkcja()"><p id="my"></p><script>function nowaFunkcja(){document.getElementById("my").innerHTML="a key is pressed";}</script>
+umieść obrazek, który w przypadku najechania na niego kursorem zwiększy rozmiar do 50 pikseli (wysokość, szerokość), wywołując funkcję "large_img", a w przypadku przesunięcia kursora znad obrazka wykona się funkcja "normal_img" ustalająca poprzedni rozmiar (25 pikseli - wysokość i szerokość); funkcje mają odnosić się do bieżącego elementu HTML; źródło obrazka: "emot.gif", alternatywna nazwa: "emot", szerokość: 25 pikseli, wysokość: 25 pikseli; napisz skrypt, gdzie zdefiniujesz wymienione funkcje, posiadające parametry s 
+<img onmouseover="large_img(this)" onmouseout="normal_img(this)" src="emot.gif" alt="emot" width="25" height="25"><script>function large_img(s){s.style.height="50px";s.style.width="50px";}function normal_img(s){s.style.height="25px";s.style.width="25px";}</script>
+stwórz zmienną "lang" typu let i przypisz jej treść "JavaScript", a następnie wyodrębnij pierwsze cztery litery, stosując metodę slice i posługując się liczbami ujemnymi; wyodrębnioną część umieść w zmiennej "another_lang" typu var; zapisz w jednym wierszu 
+let lang="JavaScript";var another_lang=lang.slice(-10,-6);
+napisz skrypt, w którym stworzysz zmienną "alph" typu let z treścią "abcdefgh", a następnie umieścisz w elemencie HTML o id "a" wyodrębnione z niej przy pomocy odpowiedniej metody 3 kolejne litery, zaczynając od indeksu 3; zapisz w jednym wierszu 
+<script>let alph="abcdefgh";document.getElementById("a").innerHTML=alph.substr(3,3);</script>
+stwórz przycisk z napisem "Click", który po kliknięciu wykona funkcję "newF", paragraf z treścią "this is an OLD site" o id "a", a następnie napisz skrypt z funkcją "newF" ze zmienną let "txt" zawierającą aktualną treść bieżącego elementu (paragrafu o id "a"); funkcja ma zmienić w tym elemencie wyraz "OLD" na "NEW", ignorując wielkość liter w nawiasie ("old" ma być napisane małymi literami); zapisz w jednym wierszu 
+<button onclick="newF()">Click</button><p id="a">this is an OLD site</p><script>function newF(){let txt=document.getElementById("a").innerHTML;document.getElementById("a").innerHTML=txt.replace(/old/i,"NEW");}</script>
+stwórz przycisk z napisem "Try", który po najechaniu kursorem wykona funkcję "myFn", paragraf z treścią "Gate1 is locked and Gate2 is locked" o id "o", a następnie napisz skrypt z funkcją "myFn" zawierającą zmienną let "t", która zmieni wszystkie wyrazy "locked" na "open" w powyższym paragrafie po najechaniu kursorem na przycisk; zapisz w jednym wierszu 
+<button onmouseover="myFn()">Try</button><p id="o">Gate1 is locked and Gate2 is locked</p><script>function myFn(){let t=document.getElementById("o").innerHTML;document.getElementById("o").innerHTML=t.replace(/locked/g,"open");}</script>
+stwórz zmienną text1 typu let o treści "  Hello  ", a następnie stwórz zmienną text 2 typu let, w której dzięki odpowiedniej metodzie usuniesz skrajne wolne przestrzenie z treści text1; zapisz w jednym wierszu 
+let text1="  Hello  ";let text2=text1.trim();
+zamień typ zmiennej "liczba" o wartości 5 na zmienną typu string 
+liczba=liczba.toString();
+stwórz zmienną t2 typu let, w której ze zmiennej text o treści "HELLO" wyodrębnisz literę E najprostszym sposobem
+let t2=text[1];
+stwórz pusty paragraf o id "s"; napisz skrypt ze zmienną "content" typu let z treścią: "Apple; Banana; Cherry" oraz zmienną "arr" typu let, do której przypiszesz podzieloną treść zmiennej "content" (używając split i znaku "; "); zmiennej "content" przypisz "", a następnie stwórz pętlę "for i" ("i" typu let), która dopóki i jest mniejsza od długości "arr", dodaje 1 do wartości "i" (i++); pętla ma dodawać do "content" bieżący element "arr[i]" i " "; umieść "content" w elemencie HTML o id "s"; zapisz w jednym wierszu 
+<p id="s"></p><script>let content="Apple; Banana; Cherry";let arr=content.split("; ");content="";for(let i=0;i<arr.length;i++){content+=arr[i]+" ";}document.getElementById("s").innerHTML=content;</script>
+stwórz zmienną let "index", w której umieścisz numer indeksu pierwszej litery słowa "word" wyszukiwanego w treści zawartej w zmiennej "text"
+let index=text.indexOf("word");
+stwórz zmienną var "ind_L", w której umieścisz numer indeksu pierwszej litery słowa "last", które pojawia się w treści zawartej w zmiennej "T2" po raz ostatni
+var ind_L=T2.lastIndexOf("last");
+stwórz zmienną "arr" typu const, w której umieścisz wszystkie wyrazy "yes" znalezione w tekście zawartym w zmiennej "txt" niezależnie od wielkości liter 
+const arr=txt.match(/yes/gi);
+w elemencie HTML o id "ft" umieść informację, czy tekst w zmiennej "txt" zawiera treść "no", zaczynając od numeru indeksu 20 
+document.getElementById("ft").innerHTML=txt.includes("no",20);
+sprawdź, czy treść zmiennej txt zaczyna się od treści "Hello" 
+txt.startsWith("Hello");
+stwórz zmienną let "text" i dodaj do niej treść typu template literals "Hello world!" 
+let text=`Hello world!`;
+stwórz zmienną var "film" i przypisz jej treść typu template literals "Film pod tytułem "Kieł""
+var film=`Film pod tytułem "Kieł"`;
+napisz skrypt, w którym stworzysz zmienne typu let: "autor" z przypisaną do niej treścią "James Jones" oraz "tytuł" z przypisaną do niej treścią "Cienka czerwona linia", a także zmienną "tx" typu var, której przypiszesz treść (template literals) "Książka: (...), autor: (...)", gdzie zamiast "(...)" będą podane treści zmiennych odpowiednio "tytuł" i "autor"; treść zmiennej "tx" zapisz w drugim (o indeksie 1) elemencie o klasie "book"; zapisz w jednym wierszu 
+<script>let autor="James Jones";let tytuł="Cienka czerwona linia";var tx=`Książka: ${tytuł}, autor: ${autor}`;document.getElementsByClassName("book")[1].innerHTML=tx;</script>
+napisz skrypt ze zmiennymi "time_1" i "time_2" typu let z przypisanymi wartościami odpowiednio 4.2705 i 1.3440, oraz ze zmienną let "total", która zawiera treść template literals "Total: (...)", gdzie zamiast "(...)" ma być suma wartości pozostałych zmiennych zaokrąglona do trzech liczb po przecinku za pomocą metody tofixed; wartość zmiennej "total" ma się wyświetlić w drugim elemencie HTML "h1"; zapisz w jednym wierszu 
+<script>let time_1=4.2705;let time_2=1.3440;let total=`Total: ${(time_1+time_2).toFixed(3)}`;document.getElementsByTagName("h1")[1].innerHTML=total;</script>
+napisz skrypt ze zmiennymi let: "members" z treścią "members:", listę "names" z imionami "Mark", "Adam" i "James", a także zmienną "html" z treścią template literals: nagłówek h2 z zawartością "members" oraz element ul, który dzięki pętli "for x" (const) odniesie się do listy "names" i wyświetli jej zawartość; zmienna "html" ma być w trzecim paragrafie; zapisz w jednym wierszu 
+<script>let members="members:";let names=["Mark","Adam","James"];let html=`<h2>${members}</h2><ul>`;for(const x of names){html+=`<li>${x}</li>`;}html+=`</ul>`;document.getElementsByTagName("p")[2].innerHTML=html;</script>
+stwórz, używając new, nową listę "cars" (const) zawierającą elementy: "Fiat", "Opel", "BMW" 
+const cars=new Array("Fiat","Opel","BMW");
+stwórz listę "drinks" (const) bez użycia new, zawierającą elementy: "juice", "tea", "water" 
+const drinks=["juice","tea","water"];
+wyświetl element "name" obiektu "person" w elemencie HTML o id "nm" 
+document.getElementById("nm").innerHTML=person.name;
+stwórz zmienną let "owoc" zawierającą ostatni element listy "owoce", posługując się metodą length 
+let owoc=owoce[owoce.length-1];
+stwórz listę "numery" (const) z liczbami: 25, 32, 4, 1, a następnie przy użyciu metody sort oraz odpowiedniej funkcji (sama metoda sort zawodzi przy liczbach) ułóż je w kolejności od najmniejszej; w funkcji zastosuj zmienne x i y; zapisz w jednym wierszu
+const numery=[25,32,4,1];numery.sort(function(x,y){return x-y});
+stwórz listę "numery" (var) z liczbami: 7, 15, 24, 0, a następnie przy użyciu metody sort oraz odpowiedniej funkcji (sama metoda sort zawodzi przy liczbach) ułóż je w kolejności malejącej; zastosuj w funkcji zmienne x i y; zapisz w jednym wierszu 
+var numery=[7,15,24,0];numery.sort(function(x,y){return y-x});
+stwórz paragraf o treści "Najmniejsza liczba: <span></span>", a następnie napisz skrypt zawierający listę "nmb" (const) z liczbami: 4, 99, -1 i 0, polecenie wyświetlające liczbę zwróconą przez funkcję "myA(nmb)" w pierwszym elemencie HTML span, a także funkcję "myA(x)" zwracającą najmniejszą wartość danego elementu (listy), wykorzystując metodę min.apply; zapisz w jednym wierszu 
+<p>Najmniejsza liczba: <span></span></p><script>const nmb=[4,99,-1,0];document.getElementsByTagName("span")[0].innerHTML=myA(nmb);function myA(x){return Math.min.apply(null,x);}</script>
+stwórz skrypt ze zmienną const "numbers" zawierającą listę z liczbami: 20, 5, -12, 16 i 25 oraz zmienną let "txt" z treścią "", a następnie przywołaj funkcję "xF" dla każdego elementu listy "numbers", a potem spraw, by treść zmiennej "txt" wyświetliła się w paragrafie o id "s"; na końcu stwórz funkcję "xF" zawierającą parametry "value", "index" i "array", która za każdym razem doda do "txt" wartość "value" oraz "<br>"; zapisz w jednym wierszu 
+<script>const numbers=[20,5,-12,16,25];let txt="";numbers.forEach(xF);document.getElementById("s").innerHTML=txt;function xF(value,index,array){txt+=value+"<br>";}</script>
+napisz skrypt, który zawiera listę const "num1" (5,7,9,16,25) oraz listę const "num2", która przy pomocy metody map wykona dla każdego elementu listy "num1" funkcję "yF", która za każdym razem zwraca bieżącą wartość pomnożoną przez 2, następnie spraw, by elementy listy "num2" wyświetliły się w elemencie HTML "h2" (pierwszym), a na końcu stwórz funkcję "yF" z parametrem "value"; napisz w jednym wierszu 
+<script>const num1=[5,7,9,16,25];const num2=num1.map(yF);document.getElementsByTagName("h2")[0].innerHTML=num2;function yF(value){return value*2;}</script>
+napisz skrypt, który zawiera zmienną const "num" z liczbami: 35, 14, 9, 6 i 0, oraz zmienną const "o10" z metodą oraz funkcją, które filtrują elementy "num" i zwracają liczby większe niż 10, następnie spraw, aby elementy listy "o10" wyświetliły się w paragrafie o id "d", a na końcu stwórz funkcję "mF" z parametrem "value"; napisz w jednym wierszu 
+<script>const num=[35,14,9,6,0];const o10=num.filter(mF);document.getElementById("d").innerHTML=o10;function mF(value){return value>10;}</script>
+napisz skrypt zawierający listę const "fruits" ("apple", "orange" i "mango"), zmienną let "position", której wartość odpowiada numerowi indeksu pierwszego słowa "orange" w liście "fruits", zwróconemu przy pomocy odpowiedniej metody; spraw, by w paragrafie o id "f" pojawiła się treść "orange has index: " wraz z wartością zmiennej "position"; zapisz w jednym wierszu 
+<script>const fruits=["apple","orange","mango"];let position=fruits.indexOf("orange");document.getElementById("f").innerHTML="orange has index: "+position;</script>
+stwórz zmienną const "d", do której przy użyciu new przypiszesz datę "2021-04-25" 
+const d=new Date("2021-04-25");
+stwórz zmienną const "d", do której przy użyciu new przypiszesz datę: godz. 16:30 i 45 sekund, 19 grudnia 2000 roku (zwróc uwagę na nr indeksu miesiąca) 
+const d=new Date(2000,11,19,16,30,45);
+stwórz zmienną var "msec", która przy użyciu odpowiedniej metody zamieni datę "March 25, 2001" na liczbę milisekund, które do tego momentu minęły od 1 stycznia 1970 roku 
+var msec=Date.parse("March 25,2001");
+stwórz listę const "mies" ("sty","lu","ma","kw","maj","cze","lip","sie","wrz","paź","lis","gru"), zmienną let "d", do której przypisana będzie bieżąca data (przy użyciu new Date), a także zmienną let "b_mies", do której przypisana będzie nazwa aktualnego miesiąca wzięta z listy "mies"; zapisz w jednym wierszu 
+const mies=["sty","lu","ma","kw","maj","cze","lip","sie","wrz","paź","lis","gru"];let d=new Date();let b_mies=mies[d.getMonth()];
+stwórz zmienną let "m", która zawiera minuty z aktualnego czasu zawartego w zmiennej "d"
+let m=d.getMinutes();
+stwórz zmienną let "d" z bieżącą datą, a następnie ustaw miesiąc na marzec (indeks 2); zapisz w jednym wierszu 
+let d=new Date();d.setMonth(2);
+napisz skrypt z klasą "member" z konstruktorem o parametrach "nm" i "yr" i odnoszącymi się do nich elementami odpowiednio "this.name" i "this.year", metodą "age()" ze zmienną const "date" z aktualną datą, zwracającą różnicę między aktualnym rokiem a wartością "this.year" ("yr"); stwórz zmienną const "info", z którą powiąże się nowy element klasy "member" z atrybutami "Ed" i 2014; wyświetl w elemencie o id "d" wartość "info.age()"; zapisz w jednym wierszu 
+<script>class member{constructor(nm,yr){this.name=nm;this.year=yr;}age(){const date=new Date();return date.getFullYear()-this.year;}}const info=new member("Ed",2014);document.getElementById("d").innerHTML=info.age()</script>
+stwórz zmienną "fruits" (const) i przypisz mu nowy obiekt typu map (gdzie klucze mogą mieć dowolny typ danych) z parami key-value: "apple" - 500, "bananas" - 300, "oranges" - 200 
+const fruits=new Map([["apples",500],["bananas",300],["oranges",200]]);
+napisz skrypt z listą const "towns": "Gdynia", "Olsztyn" i "Krosno"; zadeklaruj zmienne let "i", "ln" i "tx" (w jednym wierszu); stwórz pętlę for, gdzie nadasz zmiennej "i" wartość 0, przypiszesz zmiennej "ln" długość "towns", przypiszesz zmiennej "tx" zawartość "" oraz sprawisz, że póki "i<ln", wartość "i" wzrośnie za każdym razem o 1 (użyj "++"); każda sekwencja doda do zmiennej "tx" element "towns[i]" oraz "<br>"; wyświetl "tx" w paragrafie o id "d"; zapisz w jednym wierszu 
+<script>const towns=["Gdynia","Olsztyn","Krosno"];let i,ln,tx;for(i=0,ln=towns.length,tx="";i<ln;i++){tx+=towns[i]+"<br>";}document.getElementById("d").innerHTML=tx;</script>
+napisz skrypt ze zmienną var "i" o wartości 5 oraz z pętlą for, gdzie znów zadeklarujesz zmienną var "i" i nadasz jej wartość 0 oraz sprawisz, że póki "i<10", wartość "i" wzrasta o 1 (z użyciem "+=");wyświetl końcową wartość i w paragrafie o id "ex"; zapisz w jednym wierszu 
+<script>var i=5;for(var i=0;i<10;i+=1){}document.getElementById("ex").innerHTML=i;</script>
+napisz skrypt, w którym stworzysz listę const "misc" (4,9,"a",15), zmienną let "txt" z treścią "" oraz pętlę for ("let x"; kolejność nieistotna), która za każdym razem doda do "txt" element zmiennej "misc" oraz przecinek ze spacją; wyświetl "txt" w elemencie HTML o id "a"; uwaga, pętlę z "in" stosuje się, gdy kolejność oparta na numerze indeksu nie ma znaczenia, w przeciwnym wypadku stosuje się pętlę z "of" 
+<script>const misc=[4,9,"a",15];let txt="";for(let x in misc){txt+=misc[x]+", ";}document.getElementById("a").innerHTML=txt;</script>
+stwórz nowy zbiór (set) const "Lett" z elementami "Aa", "Bb" i "Cc", a następnie stwórz zmienną let "Ss" i przypisz jej liczbę elementów zbioru "Lett", stosując metodę size; zapisz w jednym wierszu 
+const Lett=new Set(["Aa","Bb","Cc"]);let Ss=Lett.size;
+dodaj do zbioru "A" element "sth", używając metody add 
+A.add("sth");
+napisz skrypt, w którym stworzysz zmienną let "x" z liczbą 9, zmienną let "a", która zmieni wartość liczbową "x" na wartość typu string oraz zmienną let "t", która będzie zawierała typ zmiennej a; wyświetl zawartość zmiennych x, a i t (bez żadnych znaków między nimi) w elemencie HTML o id "xat"; zapisz w jednym wierszu 
+<script>let x=9;let a=x.toString();let t=typeof a;document.getElementById("xat").innerHTML=x+a+t;</script>
+napisz skrypt z błędnie zapisanym poleceniem alert ("alertt" z tekstem "Hello!"); wyświetl przy użyciu parametru "er" informację o błędzie w elemencie HTML o id "E"; zapisz w jednym wierszu 
+<script>try{alertt("Hello!");}catch(er){document.getElementById("E").innerHTML=er.message;}</script>
+napisz skrypt, w którym zadeklarujesz zmienną var "x", a następnie osobno nadasz jej wartość 7; stwórz zmienną let "elm", do której również osobno przypiszesz polecenie getelementbyid odnoszące się do elementu "dx" oraz sprawisz, że zawartość zmiennej "x" wyświetli się w odpowiednim elemencie HTML; zapisz w jednym wierszu 
+<script>var x;x=7;let elm=document.getElementById("dx");elm.innerHTML=x;</script>
+napisz skrypt, w którym użyjesz trybu strict, a następnie stworzysz zmienną let "x" z wartością liczbową 9.45; wyświetl zawartość zmiennej x w pierwszym elemencie HTML o klasie "newClass"; zapisz w jednym wierszu 
+<script>"use strict";let x=9.45;document.getElementsByClassName("newClass")[0].innerHTML=x;</script>
+napisz skrypt typu module, gdzie importujesz zmienne "name" i "age" z zawartościami; źródło: plik "person.js"; stwórz zmienną let "text", która zawiera "name", przecinek ze spacją oraz "age"; wyświetl zawartość "text" w elemencie HTML o id "dx"; zapisz w jednym wierszu 
+<script type="module">import{name,age}from"./person.js";let text=name+", "+age;document.getElementById("dx").innerHTML=text;</script>
+napisz skrypt typu module, gdzie importujesz zawartość pliku "message.js" (użyj zmiennej "x"); wyświetl zawartość zmiennej x w elemencie HTML o id "dx"; wyświetl w jednym wierszu 
+<script type="module">import x from"./message.js";document.getElementById("dx").innerHTML=x();</script>
+umieść obrazek z id "screen", stosując plik "screen_on.jpg", nadając mu szerokość 120 pikseli, a następnie stwórz dwa przyciski: pierwszy po wciśnięciu ustawia obrazek "screen_off.jpg" w elemencie o id "screen" i ma napis "off", a drugi przypisuje temu elementowi obrazek "screen_on.jpg" i ma napis "on"; napisz w jednym wierszu
+<img id="screen" src="screen_on.jpg" width="120"><button onclick=document.getElementById("screen").src="screen_off.jpg">off</button><button onclick=document.getElementById("screen").src="screen_on.jpg">on</button>
+umieść obrazek z zastosowaniem eventu onmouseover, który uruchamia funkcję big, oraz eventu onmouseleave, który uruchamia funkcję small; obie funkcje mają parametr odnoszący się do bieżącego elementu HTML; obrazek to "pic.gif", alternatywna nazwa - "pic", szerokość wynosi 32 piskele, a wysokość - 48 pikseli; stwórz skrypt ze zdefiniowanymi funkcjami big(a) i small(a);funkcją big ma ustanowić styl: szerokość 50 pikseli i wysokość 75 pikseli, a funkcja small ma ustanowić styl: szerokość 20 pikseli i wysokość 30 pikseli; zapisz w jednym wierszu 
+<img onmouseover="big(this)" onmouseleave="small(this)" src="pic.gif" alt="pic" width="32" height="48"><script>function big(x){x.style.width="50px";x.style.height="75px";}function small(x){x.style.width="20px";x.style.height="30px";}</script>
+stwórz pusty paragraf o id "x": szer. 16 procent, wys. 12 procent, kolor tła RGB 30,30,30 z nieprzezroczystością 0.6; przemieszczaniem się razem z przewijaniem ekranu, lewym marginesem 40 procent, marginesem górnym 5 procent, przesunięciem tekstu w lewo, odsunięciem od krawędzi odpowiednio 2, 0, 2 i 2 procent, a także z eventem kliknięcia wywołującym funkcję "info_off", eventem najechania na paragraf wywołującym funkcję "cookies_info" oraz eventem odjechania kursorem znad paragrafu wywołującym funkcję "info_r"; zapisz w jednym wierszu 
+<p id="x" style="width:16%;height:12%;background-color:rgb(30,30,30,0.6);position:fixed;margin-left:40%;margin-top:5%;text-align:left;padding:2%0%2%2%;" onclick=info_off() onmouseover=cookies_info() onmouseleave=info_r()></p>
+stwórz w jednym wierszu skrypt ze zdefiniowanymi trzema funkcjami; pierwsza - "cookies_info" - ma zawierać zmienną let "s" z przypisanym jej skojarzeniem z elementem o id "x" oraz zmianę stylu tego elementu (przy użyciu zmiennej "s"): użyciem tła w postaci pliku "beton_2.jpg" oraz nieprzezroczystością 0.8; druga - "info_off" - wyłączyć wyświetlanie elementu o id "x" (przy pomocy display); ostatnia - "info_r" - ma zawierać smienną s (let) ze skojarzeniem z pierwszym paragrafem oraz zmianę stylu tego elementu (przy użyciu "s"): tło rgb(150,150,150,0.4) i kolor rgb(15,15,15,0.9) 
+<script>function cookies_info(){let s=document.getElementById("x");s.style.backgroundImage="url('beton_2.jpg')";s.style.opacity="0.8";}function info_off(){document.getElementById("x").style.display="none";}function info_r(){let s=document.getElementsByTagName("p")[0];s.style.background="rgb(150,150,150,0.4)";s.style.color="rgb(15,15,15,0.9)"}</script>

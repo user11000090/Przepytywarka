@@ -22,13 +22,13 @@ stwórz linię oddzielającą paragrafy lub nagłówki
 <hr>
 określ kolor tła jako jasnoszary 
 <body style="background-color:lightgrey;">
-określ kolor tła nagłówka "Gold Heading" jako złoty 
+określ kolor tła nagłówka o rozmiarze 1 i treści "Gold Heading" jako złoty 
 <h1 style="background-color:gold;">Gold Heading</h1>
 określ kolor tła paragrafu "salmon paragraph" jako łososiowy 
 <p style="background-color:salmon;">salmon paragraph</p>
 określ arial jako czcionkę nagłówka "Head" o rozmiarze 1 
 <h1 style="font-family:arial;">Head</h1>
-wyświetl treść paragrafu "paragraph" w rozmiarze 300% 
+wyświetl treść paragrafu "paragraph" w rozmiarze czcionki 300% 
 <p style="font-size:300%;">paragraph</p>
 wyświetl wyśrodkowany tekst paragrafu "centered paragraph" 
 <p style="text-align:center;">centered paragraph</p>
@@ -42,7 +42,7 @@ napisz tekst "marked text" zaznaczony kolorem
 <mark>marked text</mark>
 napisz przekreślony nagłówek "Deleted Header" o rozmiarze 2 
 <h2><del>Deleted Header</del></h2>
-napisz podkreślony nagłówek "Inserted Header" 
+napisz podkreślony (krótszą metodą) nagłówek "Inserted Header" o rozmiarze 1 
 <h1><ins>Inserted Header</ins></h1>
 napisz "subscript text" pomniejszoną czcionką - indeks dolny 
 <sub>subscript text</sub>
@@ -76,7 +76,7 @@ ustaw kolor tła na całej stronie jako pudrowoniebieski
 <style>body{background-color:powderblue;}</style>
 ustaw tło dla wszystkich paragrafów na stronie jako srebrny 
 <style>p{background-color:silver;}</style>
-zdefiniuj styl na wielu stronach 
+zdefiniuj styl na wielu stronach, odnosząc się do "styles.css" 
 <head><link rel="stylesheet" href="styles.css"></head>
 ustaw czcionkę verdana na całej stronie dla wszystkich paragrafów 
 <style>p{font-family:verdana;}</style>
@@ -106,7 +106,7 @@ ustaw szerokość wszystkich obrazków na stronie jako 150%
 <style>img{width:150%;}</style>
 umieść obrazek ze strony "https://www.obrazki.com/images/obrazek.jpg" i użyj alternatywnej nazwy "obrazek" 
 <img src="https://www.obrazki.com/images/obrazek.jpg" alt="obrazek">
-umieść w paragrafie animowany obrazek "smile2.gif" z alternatywną nazwą "S2", umiejscowieniem po lewej stronie tekstu oraz rozmiarem 40x40 pikseli; treść tekstu: "Animowany obrazek po lewej stronie" 
+umieść w paragrafie animowany obrazek "smile2.gif" z alternatywną nazwą "S2" i zdefiniowanym stylem: umiejscowienie po lewej stronie względem tekstu, szerokość 40 pikseli i wysokość 40 pikseli; treść tekstu: "Animowany obrazek po lewej stronie" 
 <p><img src="smile2.gif" alt="S2" style="float:left;width:40px;height:40px;">Animowany obrazek po lewej stronie</p>
 zdefiniuj mapę obrazową przy użyciu pliku "mapa.jpg" z alternatywną nazwą "map" i nazwą mapy "s_mapa" 
 <img src="mapa.jpg" alt="map" usemap="#s_mapa">
@@ -134,7 +134,7 @@ określ tytuł strony jako "Tytuł strony" i umieść jej ikonę o nazwie "favic
 <title>Tytuł strony</title><link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 określ tytuł strony jako "My Website" 
 <title>My Website</title>
-stwórz tabelę rozciągniętą na 80% szerokości strony, w której umieścisz w pierwszej kolumnie osoby ("Person"), a w drugiej państwo ("Country"); drugi wiersz ma zawierać nazwisko "Smith" i państwo "UK", a trzeci "Kowalski" i "Mexico" 
+stwórz tabelę rozciągniętą na 80% szerokości strony, w której umieścisz w pierwszym, głównym rzędzie nazwy kolumn: "Person" i "Country"; drugi wiersz ma zawierać nazwisko "Smith" i państwo "UK", a trzeci "Kowalski" i "Mexico" 
 <table style="width:80%;"><tr><th>Person</th><th>Country</th></tr><tr><td>Smith</td><td>UK</td></tr><tr><td>Kowalski</td><td>Mexico</td></tr></table>
 stwórz małą tabelę jednowierszową, gdzie w pierwszej kolumnie będzie nazwa miasta "Vienna", a w drugiej "Austria" 
 <table><tr><td>Vienna</td><td>Austria</td></tr></table>
@@ -142,25 +142,25 @@ spraw, żeby elementy: table, th i td miały granicę o grubości 2 pikseli w po
 <style>table,th,td{border:2px solid blue;border-collapse:collapse;}</style>
 ustal właściwości tabel na stronie, aby wszystkie ich elementy miały granice w formie białej linii o grubości jednego piksela, pojedynczej, a także tło w kolorze #96D4D4 
 <style>table,th,td{border:1px solid white;border-collapse:collapse;background-color:#96D4D4;}</style>
-ustal właściwości tabeli na stronie, aby grubość linii wynosiła 2 piksele, ich kolor był szary oraz żeby były zaokrąglone (zaokrąglenie wielkości 7 pikseli) 
+ustal właściwości tabel na stronie (elementów table, th i td), aby linie miały grubość 2 pikseli, były ciągłe i w kolorze szarym, a dodatkowo były zaokrąglone; wielkość zaokrąglenia to 7 pikseli 
 <style>table,th,td{border:2px solid grey;border-radius:7px;}</style>
-ustal własciwości tabel na stronie, aby komórki miały granice składające się z kropek 
+ustal własciwości komórek tabel na stronie, aby miały granice składające się z kropek 
 <style>th,td{border-style:dotted;}</style>
 ustal właściwości tabel na stronie, aby komórki miały granice składające się z kresek 
 <style>th,td{border-style:dashed;}</style>
-ustal właściwości tabeli na stronie, aby komórki miały granice z efektem trójwymiarowości (wklęsłe) 
+ustal właściwości tabel na stronie, aby komórki miały granice z efektem trójwymiarowości (wklęsłe) 
 <style>th,td{border-style:inset;}</style>
 ustal właściwości tabel na stronie, aby komórki nie miały widocznych granic 
 <style>th,td{border-style:none;}</style>
 ustal właściwości tabel na stronie, aby komórki posiadały ukryte granice 
 <style>th,td{border-style:hidden;}</style>
-ustal właściwości tabel na stronie, aby granice komórek były w formie linii i miały kolor #96D4D4 
+ustal właściwości komórek tabel na stronie, aby ich granice były w formie linii i miały kolor #96D4D4 
 <style>th,td{border-style:solid;border-color:#96D4D4;}</style>
 stwórz małą tabelę jednowierszową, gdzie pierwsza kolumna będzie miała szerokość 70% i zawierała tekst "niebieski", a druga zawierała tekst "zielony" 
 <table><tr><td style="width:70%;">niebieski</td><td>zielony</td></tr></table>
 stwórz małą tabelę jednokolumnową, w której pierwszy wiersz ma treść "UK", a drugi "USA" i ma wysokość 50 pikseli 
 <table><tr><td>UK</td></tr><tr style="height:50px;"><td>USA</td></tr></table>
-ustal właściwości tabeli, aby nagłówki miały tekst przesunięty w prawo 
+ustal właściwości tabel na stronie, aby nagłówki miały tekst przesunięty w prawo 
 <style>th{text-align:right;}</style>
 ustal odległość tekstu w tabelach na stronie od granic komórek jako 10 pikseli 
 <style>th,td{padding:10px;}</style>
@@ -202,7 +202,7 @@ napisz "Hello" w paragrafie; grubość obramienia to 2 piksele, styl to przerywa
 <p style="border:2px dashed orange;">Hello</p>
 Napisz w paragrafie "United States of America", stosując czarne obramienie o grubości 2 pikseli wokół słowa "States" 
 <p>United <span style="border:2px solid black;">States</span> of America</p>
-Napisz "Dzień dobry" w paragrafie typu div (który może m.in. zawierać nagłówki i paragrafy), stosując czarny kolor tła, białą czcionkę i odsunięcie tekstu od krawędzi wielkości 25 pikseli 
+Napisz "Dzień dobry" w sekcji div, stosując czarny kolor tła, białą czcionkę i odsunięcie tekstu od krawędzi wielkości 25 pikseli 
 <div style="background-color:black;color:white;padding:25px;">Dzień dobry</div>
 wewnątrz paragrafu umieśc słowo "ciemnooliwkowy", które ma (w przeciwieństwie do reszty tekstu) kolor ciemnooliwkowy i pogrubioną czcionkę 
 <span style="color:darkolivegreen;font-weight:bold;">ciemnooliwkowy</span>
@@ -230,7 +230,7 @@ w paragrafie wyświetl trzy znaki "Euro", pierwszy przy pomocy nazwy symbolu (&e
 <p>&euro;&#8364;&#x20AC;</p>
 wyświetl w paragrafie emoji &#128516 
 <p>&#128516;</p>
-wyświetl obok siebie dwa emoji wielkości 52 pikseli: &#128516 i &#128525 
+wyświetl obok siebie w paragrafie dwa emoji wielkości 52 pikseli: &#128516 i &#128525 
 <p style="font-size:52px;">&#128516;&#128525;</p>
 określ właściwości bocznych części strony aside: umiejscowienie po prawej stronie, szerokość 30%, odsunięcie od lewej krawędzi 15%, kolor tła jasnoszary 
 <style>aside{float:right;width:30%;padding-left:15%;background-color:lightgrey;}</style>
@@ -254,9 +254,9 @@ stwórz id o nazwie "special" z kolorem czcionki maroon
 <style>#special{color:maroon;}</style>
 stwórz ramkę iframe z adresem "domyslny.html" 
 <iframe src="domyslny.html"></iframe>
-aktywuj skrypt "scrpt", który wpisuje tekst "Hello!" 
-<script>document.getElementById("scrpt").innerHTML="Hello!";</scrpt>
-umieść paragraf, do którego odniesie się aktywowany później skrypt o nazwie "scrpt" i umieści w nim tekst 
+stwórz skrypt, który w elemencie o id "scrpt" wyświetli treść "Hello!" 
+<script>document.getElementById("scrpt").innerHTML="Hello!";</script>
+umieść paragraf, do którego odniesie się aktywowany później skrypt o nazwie "scrpt" (ze względu na jego id) i umieści w nim treść 
 <p id="scrpt"></p>
 w paragrafie napisz treść "proste działanie: ", następnie umieść "x" jako wartość var, a na końcu napisz dalszą treść "=3+4" 
 <p>proste działanie: <var>x</var>=3+4</p>

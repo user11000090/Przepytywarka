@@ -12,7 +12,7 @@ otwórz w konsoli powłokę
 python manage.py shell
 w konsoli, przy użyciu powłoki, zaimportuj modele "Element" z aplikacji "App_one" 
 from App_one.models import Element
-w konsoli, przy użyciu powłoki, nadaj wartość a elementowi z tabeli bazy danych "Element" o indeksie 2 
+w konsoli, przy użyciu powłoki, przypisz zmiennej a element tabeli bazy danych "Element" o indeksie 2 
 a=Element.objects.all()[2]
 w konsoli, przy użyciu powłoki, wyświetl wartość "color" elementu z tabeli bazy danych "Element" zawartego w zmiennej a 
 a.color
@@ -59,7 +59,7 @@ w pliku "detale.html" w folderze "templates" aplikacji "App_one" napisz paragraf
 w pliku "rzeczy.html" w folderze "templates" aplikacji "App_one" stwórz nieuporządkowaną listę odnośników do strony "detale" wyświetlanych jako poszczególne elementy tabeli bazy danych "Element" (rubryki "color" i "size" oddzielone spacją); poszczególne elementy mają być odczytane przy pomocy pętli "for a" odnoszącej się do zmiennej "moje_elementy" 
 <ul>{%for a in moje_elementy%}<li><a href="detale/{{a.id}}">{{a.color}} {{a.size}}</a></li>{%endfor%}</ul>
 stwórz w pliku "views.py" w folderze aplikacji "App_one" funkcję "detale" (z parametrami "request" i "id") zawierającą zmienne: "moje_elementy" odnoszący się do tabeli bazy danych Element, "template" odnoszący się do pliku "detale.html" oraz "context"; zapisać w jednej linijce, pamiętając, że w rzeczywistości wiersz z "return" musi tak naprawdę być napisany osobno 
-def detale(request,id):moje_elementy=Element.objects.get(id=id);template=loader.get_template("detale.html");context={"moje_elementy":moje_elementy};return HttpResponse(template.render(context,request))
+def detale(request,id):moje_elementy=Element.objects.get(id=id);template=loader.get_template("detale.html");context={"moje_elementy":moje_elementy,};return HttpResponse(template.render(context,request))
 do listy "urlpatterns" w pliku urls.py w folderze aplikacji "App_one" dopisz ścieżkę odnoszącą się do strony "detale" ukazującej szczegóły poszczególnych elementów tabeli bazy danych "Element" 
 path("App_one/detale/<int:id>",views.detale,name="detale")
 w utworzonym pliku "mstr.html" w folderze "templates" aplikacji napisz wiersz, w którym pomiędzy elementami <head> i <title> znajdzie się kod wyświetlający treść (tytuł) z innych szablonów projektu 
@@ -83,7 +83,7 @@ ALLOWED_HOSTS=["*"]
 w pliku "404.html" w folderze "templates" aplikacji umieść nagłówek o rozmiarze 1 z treścią "Error!" 
 <h1>Error!</h1>
 w pliku "views.py" folderu aplikacji dodaj funkcję "tstng" z parametrem "request", która odniesie się do pliku "test.html", strony testowej w folderze "templates" i zawierającej kontekst - listę "drinks" zawierającą: "tea", "coffee", "juice"; zapisz w jednej linijce (normalnie "return" musi być i tak w nowym wierszu) 
-def tstng(request):template=loader.get_template("test.html");context={"drinks":["tea","coffee","juice"];return HttpResponse(template.render(context,request))
+def tstng(request):template=loader.get_template("test.html");context={"drinks":["tea","coffee","juice"],};return HttpResponse(template.render(context,request))
 w pliku "urls.py" w folderze aplikacji dodaj do zbioru "urlpatterns" ścieżkę dla strony testowej, odnosząc się do funkcji "tstng" z pliku "views.py" 
 path("tstng/",views.tstng,name="tstng")
 w pliku "test.html" w folderze "templates" aplikacji dodaj pętlę "for a" odpowiedzialną za wyświetlenie elementów zbioru "drinks"; elementy listy mają się wyświetlić w paragrafach 
@@ -121,7 +121,7 @@ utwórz bezpośrednio w pliku "test.html" zmienne "var_1" i "var_2" i nadaj im w
 w pliku "test.html" stwórz pętlę "for s", która przeprocesuje elementy tabeli bazy danych "Element" i wyświetli w nagłówkach h1 ich numery kolejności, a w paragrafach rubryki "color" i "size" oddzielone przecinkiem i spacją 
 {%for s in Element%}<h1>{{s.id}}</h1><p>{{s.color}}, {{s.size}}</p>{%endfor%}
 w pliku "test.html" stwórz pętlę "for r", która przeprocesuje elementy tabeli bazy danych "Element" i wyświetli w odwróconej kolejności w nagłówkach h2 ich numery indeksów wraz z kropką i spacją, a w paragrafach rubryki "color" i "size" oddzielone przecinkiem i spacją 
-{%for r in Element reversed%}<h2>{{r.id}}</h2><p>{{r.color}}, {{r.size}}</p>{%endfor%}
+{%for r in Element reversed%}<h2>{{r.id}}. </h2><p>{{r.color}}, {{r.size}}</p>{%endfor%}
 w pliku "test.html" stwórz pętlę "for t", która przeprocesuje elementy listy "testlist", która jest pusta, i wyświetli w paragrafie treść "nothing" zamiast elementów "item" 
 {%for t in testlist%}<p>{{t.item}}</p>{%empty%}<p>nothing</p>{%endfor%}
 w pliku "test.html" stwórz wewnątrz nieuporządkowanej listy html pętlę "for t", która przeprocesuje elementy listy "testlist"; w przypadku, gdy nie istnieje, zamiast listy z wartościami "name" elementów "testlist", wyświetlić ma się wiersz listy z treścią "no such object" 
@@ -130,9 +130,9 @@ w pliku "test.html" stwórz wewnątrz nieuporządkowanej listy html pętlę "for
 <ul>{%for r in fruits%}<li>{{forloop.revcounter0}}</li>{%endfor%}</ul>
 w pliku "test.html" stwórz wewnątrz nieuporządkowanej listy html pętlę "for c", która przeprocesuje elementy listy "fruits", i za pomocą forloop wyświetli kolejno numery elementów listy, licząc od numeru 1 
 <ul>{%for c in fruits%}<li>{{forloop.counter}}</li>{%endfor%}</ul>
-w pliku "test.html" stwórz wewnątrz nieuporządkowanej listy html pętlę "for a", która przeprocesuje elementy listy "fruits", i za pomocą forloop wyświetli kolejno jej elementy, a dodatkowo doda tło dla ostatniego elementu w kolorze powderblue 
+w pliku "test.html" stwórz wewnątrz nieuporządkowanej listy html pętlę "for a", która przeprocesuje elementy listy "fruits" i wyświetli kolejno jej elementy, a za pomocą forloop doda tło dla ostatniego elementu w kolorze powderblue 
 <ul>{%for a in fruits%}<li {%if forloop.last%}style="background-color:powderblue;"{%endif%}>{{a}}</li>{%endfor%}</ul>
-w pliku "rzeczy.html" stwórz wewnątrz nieuporządkowanej listy html pętlę "for a", która przeprocesuje elementy zawarte w "moje_elementy", i za pomocą forloop wyświetli kolejno rubryki "color" jej elementów, a dodatkowo zmieni kolor pierwszego elementu na złoty 
+w pliku "rzeczy.html" stwórz wewnątrz nieuporządkowanej listy html pętlę "for a", która przeprocesuje elementy zawarte w "moje_elementy"; umieść rubryki "color" tych elementów na liście, a dodatkowo stwórz warunek, za pomocą którego zmieni się kolor pierwszego elementu listy na złoty (w warunku wykorzystaj forloop) 
 <ul>{%for a in moje_elementy%}<li {%if forloop.first%}style="color:gold;"{%endif%}>{{a.color}}</li>{%endfor%}</ul>
 napisz komentarz o treści "komentarz %" umieszczonej w paragrafie, wykorzystując znak % 
 {%comment%}<p>komentarz %</p>{%endcomment%}
@@ -146,8 +146,8 @@ umieść na stronie "rzeczy.html" zawartość strony "header.html" zawierającej
 {%include "header.html" with name="Nate" company="ABC Company"%}
 w pliku "header.html" utwórz sekcję div zawierającą treść "imię: (...), firma: (...)", gdzie zamiast "(...)" mają być zmienne odpowiednio "name" i "company" (ich wartości będą nadane w innym szablonie) 
 <div>imię: {{name}}, firma: {{company}}</div>
-w pliku "views.py" w folderze aplikacji stwórz funkcję "test_1", uwzględniając zmienną "moje_dane" określającą wyświetlanie rubryk, tabelę "Element" oraz plik "rzeczy.html"; wyświetlane mają być tylko wartości "color"; w zmiennej "context" ma być też zawarta nazwa "moje_elementy";napisz w jednej linijce (wiersz z return tak naprawdę musi być w nowym wierszu!) 
-def test_1(request):moje_dane:Element.objects.values_list("color");template=loader.get_template("template.html");context={"moje_elementy":"moje_dane"};return HttpResponse(template.render(context,request))
+w pliku "views.py" w folderze aplikacji stwórz funkcję "test_1", uwzględniając zmienną "moje_dane" określającą wyświetlanie rubryk, tabelę "Element" oraz plik "template.html"; wyświetlane mają być tylko wartości "color"; w zmiennej "context" ma być też zawarta nazwa "moje_elementy";napisz w jednej linijce (wiersz z return tak naprawdę musi być w nowym wierszu!) 
+def test_1(request):moje_dane=Element.objects.values_list("color");template=loader.get_template("template.html");context={"moje_elementy":"moje_dane"};return HttpResponse(template.render(context,request))
 w funkcji "test_1" zaktualizuj zmienną "moje_dane" określającą wyświetlanie rubryk tabeli "Element", aby zwracane były tylko elementy, których wartość "color" to "red" 
 moje_dane=Element.objects.filter(color="red").values()
 napisz, jak w SQL filtrowałoby się elementy tabeli "Element", tak aby zwrócone były jedynie te, których wartość "size" to "large"
@@ -165,10 +165,10 @@ SELECT * FROM Element WHERE color="red" OR color="green";
 zaktualizuj wiersz ze zmienną "moje_dane" w funkcji "test_1" w pliku "views.py" w folderze aplikacji, aby zwrócone były tylko elementy tabeli "Element", których wartość "color" zaczyna się na literę "b" 
 moje_dane=Element.objects.filter(color__startswith="b").values()
 zaktualizuj wiersz ze zmienną "moje_dane" w funkcji "test_1" w pliku "views.py" w folderze aplikacji, aby zwrócone elementy tabeli "Element" były wyświetlone w kolejności alfabetycznej względem wartość "color" 
-moje_dane=Elemen.objects.all().order_by("color").values()
+moje_dane=Element.objects.all().order_by("color").values()
 napisz, jak w SQL określiłoby się wyświetlanie elementów tabeli "Element" w kolejności alfabetycznej względem wartość "color"
 SELECT * FROM Element ORDER BY color;
-zaktualizuj wiersz ze zmienną "moje_dane" w funkcji "test_1" w pliku "views.py" w folderze aplikacji, aby zwrócone elementy tabeli "Element" były wyświetlone w kolejności alfabetycznej względem wartość "size", ale odwróconej 
+zaktualizuj wiersz ze zmienną "moje_dane" w funkcji "test_1" w pliku "views.py" w folderze aplikacji, aby zwrócone elementy tabeli "Element" były wyświetlone w kolejności alfabetycznej odwróconej względem wartości "size" 
 moje_dane=Element.objects.all().order_by("-size").values()
 napisz, jak w SQL określiłoby się wyświetlanie elementów tabeli "Element" w kolejności alfabetycznej odwróconej względem wartość "size" 
 SELECT * FROM Element ORDER BY size DESC;
@@ -176,3 +176,9 @@ zaktualizuj wiersz ze zmienną "moje_dane" w funkcji "test_1" w pliku "views.py"
 moje_dane=Element.objects.all().order_by("color","-id").values()
 napisz, jak w SQL określiłoby się wyświetlanie elementów tabeli "Element" w kolejności alfabetycznej względem wartość "color", a także względem wartości "id", ale odwróconej
 SELECT * FROM Element ORDER BY color ASC,id DESC;
+w szablonie html wczytaj elementy static, aby możliwe było wyświetlenie np. obrazków 
+{%load static%}
+w szablonie html spraw, aby na stronie wyświetlał się obrazek "street.jpg" i nadaj mu alternatywną nazwę "street", a także określ szerokość 1400 pikseli i wysokość 580 pikseli 
+<img src={%static "street.bmp"%} alt="street" width="1400" height="580">
+w szablonie html "first_page.html" spraw, aby w tle elementu body wyświetlał się obrazek "street.bmp" nie powtarzający się 
+<body style="background-image:url({%static 'street.bmp'%});background-repeat:no-repeat;">

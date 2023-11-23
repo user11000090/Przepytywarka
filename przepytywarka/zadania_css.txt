@@ -24,11 +24,11 @@ określ styl strony: obrazek "niebo.png" nie powtarzający się, umiejscowiony w
 <style>body{background-image:url('niebo.png');background-repeat:no-repeat;background-position:top right;}</style>
 określ styl strony: obrazek "krajobraz.jpg" nie przewijający się 
 <style>body{background-image:url('krajobraz.jpg');background-attachment:fixed;}</style>
-określ styl granicy paragrafu: grubość 3 piseli, styl kropkowany, kolor granatowy 
+określ styl granicy paragrafów na stronie: grubość 3 piseli, styl kropkowany, kolor granatowy 
 <style>p{border:3px dotted navy;}</style>
 określ styl granicy paragrafu: granica kropkowana, szerokość 2 piksele, kolor czerwony; określić elementy osobno 
 <style>p{border-style:dotted;border-width:2px;border-color:red;}</style>
-określ styl lewej części granicy paragrafu: linia kropkowana 
+określ styl lewej części granicy paragrafów: linia kropkowana 
 <style>p{border-left-style:dotted;}</style>
 określ styl paragrafu: granica o grubości 2 pikseli i linia ciągła fioletowa, zaokrąglenie granicy o wielkości 7 pikseli 
 <style>p{border:2px solid violet;border-radius:7px;}</style>
@@ -168,8 +168,8 @@ użyj pliku "brd.png", aby nadać elementom div ramkę z powtarzającego się, "
 <style>div{border-image-source:url('brd.png');border-image-repeat:stretch;border-image-slice:30;}</style>
 dodaj dwa obrazki, "image0.gif" i "image1.gif", aby użyć ich jako tło dla elementu body na stronie; "image1.gif" ma być wyświetlony nad "image0.gif" 
 <style>body{background-image:url('image1.gif'),url('image0.gif');}</style>
-dodaj obrazek "image2.png" jako tło dla elementu body, określając rozmiar 75 na 50 pikseli i brak powtarzania 
-<style>body{background-image:url('image2.png');background-size:75px 50px; background-repeat:no-repeaat;}</style>
+dodaj obrazek "image2.png" jako tło dla elementów body, określając rozmiar 75 na 50 pikseli i brak powtarzania 
+<style>body{background-image:url('image2.png');background-size:75px 50px;background-repeat:no-repeat;}</style>
 dodaj obrazki "image3.jpg" i "image4.jpg" jako tło dla elementu body, określając brak powtarzania dla obu oraz rozmieszczenie: odpowiednio lewa góra i prawy dół 
 <style>body{background-image:url('image3.jpg'),url('image4.jpg');background-repeat:no-repeat,no-repeat;background-position:left top,right bottom;}</style>
 dodaj obrazek w tle dla elementu id "przyklad", określając: odsunięcie 25 pikseli, nazwa obrazka "image5.jpg", brak powtarzania, pozycję obrazka zależną od pozycji treści 
@@ -179,7 +179,7 @@ określ styl elementów p: kolor treści rgba(150,20,50,0.6)
 określ styl elementów h1: kolor tła hsl(0,80%,70%) 
 <style>h1{background-color:hsl(0,80%,70%);}</style>
 określ styl elementów h3: kolor tła hsla(0,100%,55%,0.5) 
-<style>h3{background-color:hsla(0,100%,55%,0.5);}</style.
+<style>h3{background-color:hsla(0,100%,55%,0.5);}</style>
 określ styl elementów h2: kolor rgb(55,190,144) i nieprzezroczystość 0.3 
 <style>h2{color:rgb(55,190,144);opacity:0.3;}</style>
 określ styl elementów div: tło w formie liniowego gradientu biało-niebieskiego 
@@ -230,5 +230,9 @@ stwórz dla elementów h2 tło w formie kwadratu o szerokości 100 pikseli, wyso
 <style>h2{width:100px;height:100px;background:powderblue;transition:width 2s;transition-delay:0.5s;}h2:hover{width:300px;}</style>
 stwórz dla elementów h3 tło w formie prostokąta o szerkokości 120 pikseli, wysokości 90 pikseli, w kolorze pomarańczowym, które zmieni kolor w 2 sekundy i obróci się w 1 sekundę (nastąpi zmiana typu ease-in-out) po najechaniu kursorem: nowy kolor to skyblue, a obrót ma wynieść 180 stopni; obrót z treścią 
 <style>h3{width:120px;height:90px;background:orange;transition:background 2s;transform 1s;transition-timing-function:ease-in-out;}h3:hover{background:skyblue;transform:rotate(180deg);}</style>
-stwórz dla elementów div tło - prostokąt o szer. 100 px, wys. 100 px, pozycji względnej, w kolorze pomarańczowym, z animacją o nazwie example, sekwencją 3 sekundową, animacją zapętloną; na poz. 0% sekwencji ma kolor pomarańczowy i jest odsunięte od lewej krawędzi o 0 px, na poz. 50% jest żółte i odsunięte od lewej kraw. o 200 px, a na 100% jest jasnoniebieskie i przesunięte w lewo o 0 px; przesunięcie tła z treścią 
+stwórz dla elementów div tło - prostokąt o szer. 100 px, wys. 100 px, pozycji względnej, w kolorze pomarańczowym, z animacją o nazwie example, sekwencją 3 sekundową, zapętloną; na poz. 0% sekwencji ma kolor pomarańczowy i jest odsunięte od lewej krawędzi o 0 px, na poz. 50% jest żółte i odsunięte od lewej kraw. o 200 px, a na 100% jest jasnoniebieskie i przesunięte w lewo o 0 px; przesunięcie tła z treścią 
 <style>div{width:100px;height:100px;position:relative;background-color:orange;animation-name:example;animation-duration:3s;animation-iteration-count:infinite;}@keyframes example{0%{background-color:orange;left:0px;}50%{background-color:yellow;left:200px;}100%{background-color:lightblue;left:0px;}}</style>
+spraw, aby obrazki na stronie miały styl: szerokość na 58 procent strony, wysokość automatyczna; po najechaniu kursorem obrazek ma się rozszerzyć - długość trwania rozszerzania to 0.9 sekundy, a wartość rozciągnięcia to 72 procent strony 
+<style>img{width:58%;height:auto;transition:width 0.9s;}img:hover{width:72%;}</style>
+spraw, aby obrazki na stronie, w przypadku użycia ekranu o formacie pionowym (np. na smartfonie) były rozciągnięte na szerokość 85 procent strony 
+<style>@media screen and (orientation:portrait){img{width:85%;}}</style>

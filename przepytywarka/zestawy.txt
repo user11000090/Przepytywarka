@@ -5,6 +5,4 @@ pygame
 css
 tkinter
 django
-stereometria
-europejskie_stolice
-rozmówki_angielskie
+javascript
